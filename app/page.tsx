@@ -75,7 +75,7 @@ export default function Home() {
           <div className="flex justify-between flex-wrap">
             <div>
               <h2 className="text-black font-bold text-[40px] mb-3">Bomi E&C</h2>
-              <h3 className="max-w-[491px] w-full text-[48px] leading-[120%] text-[#45525B]">We are dedicated to finding a house that you'll love.</h3>
+              <h3 className="max-w-[491px] w-full text-[48px] leading-[120%] text-[#45525B]">We are dedicated to finding a house that you ll love.</h3>
             </div>
             <div className="max-w-[561px]  w-full">
               <p className="text-lg text-[#333333]">Bomi E&C is a leading construction company with over 30 years of industry experience. We provide a full range of services, including turnkey design, construction and commissioning, ensuring strict quality control at all stages.</p>
