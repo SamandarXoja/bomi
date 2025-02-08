@@ -67,7 +67,7 @@ export default function Home() {
     //     </div>
     //   )}
     // </nav>
-    <div className="h-[10000px]">
+    <div >
       <Image className="w-full " src={back} width={1000} height={500} alt="img" />
 
       <div className="py-[100px] bg-[#FAFAFC]">
@@ -108,8 +108,8 @@ export default function Home() {
           </div>
 
           <div className="flex gap-4 flex-wrap mt-[30px]">
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -121,8 +121,8 @@ export default function Home() {
                 <p className="text-[#45525B]  text-xl mb-1">underground levels</p>
               </div>
             </div>
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -134,8 +134,8 @@ export default function Home() {
                 <p className="text-[#45525B]  text-xl mb-1">underground levels</p>
               </div>
             </div>
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -147,8 +147,8 @@ export default function Home() {
                 <p className="text-[#45525B]  text-xl mb-1">underground levels</p>
               </div>
             </div>
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -160,8 +160,8 @@ export default function Home() {
                 <p className="text-[#45525B]  text-xl mb-1">underground levels</p>
               </div>
             </div>
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -173,8 +173,8 @@ export default function Home() {
                 <p className="text-[#45525B]  text-xl mb-1">underground levels</p>
               </div>
             </div>
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -186,8 +186,8 @@ export default function Home() {
                 <p className="text-[#45525B]  text-xl mb-1">underground levels</p>
               </div>
             </div>
-            <div className="max-w-[400px] w-full min-h-[430px] pb-2 bg-white shadow-md">
-              <Image src={card} width={400} height={300} alt="card" />
+            <div className="max-w-[450px] rounded-2xl w-full min-h-[430px] pb-2 bg-white shadow-md">
+              <Image src={card} className="rounded-2xl max-w-[450px] w-full" width={450} height={300} alt="card" />
               <div className="pl-3">
                 <h3 className="text-2xl mt-4">APT Factory, Dynchondon</h3>
                 <p className="text-[#45525B] text-xl mb-1 mt-3">Location</p>
@@ -217,7 +217,7 @@ export default function Home() {
           <h2 className="text-black text-3xl font-bold">
             BOMI FINANCE CENTER
           </h2>
-          <div className="max-w-[100px] w-full h-4 bg-slate-900 mt-5 mb-5"></div>
+          <div className="max-w-[100px] w-full h-4 bg-blue-900 mt-5 mb-5"></div>
 
           <p className="mb-3">Bomi Finance Center (бизнес-центр) расположен в МДЦ «Tashkent City», который является успешным проектом на национальном уровне.</p>
           <p>Здание расположено прямо на главной улице и имеет преимущество в том, что к нему легко добраться, поскольку оно находится рядом с транспортными средствами (метро, автобус). Кроме того, это место имеет множество географических преимуществ, поскольку поблизости расположены правительственные учреждения и объекты общего обслуживания. </p>
