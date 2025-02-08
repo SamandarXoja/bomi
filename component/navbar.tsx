@@ -22,7 +22,7 @@ function Navbar() {
 
   // Закрывать dropdown при клике вне его
   useEffect(() => {
-    const closeDropdown = (e) => {
+    const closeDropdown = (e: any) => {
       if (!e.target.closest(".dropdown-menu")) {
         setIsDropdownOpen(false);
       }
