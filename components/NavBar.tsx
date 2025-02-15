@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { Link, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/logo.png";
 export default function NavBar() {

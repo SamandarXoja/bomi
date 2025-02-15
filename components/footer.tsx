@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Globe, Headset, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import telegram from "@/public/images/telegram3.svg"
 import Image from "next/image";
 
