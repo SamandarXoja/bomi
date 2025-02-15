@@ -1,6 +1,7 @@
 "use client";
 
-import { Globe, Headset, Mail } from "lucide-react";
+import { Globe, Headset,  Mail } from "lucide-react";
+import Link from "next/link";
 import { useEffect } from "react";
 declare global {
     interface Window {
@@ -61,7 +62,7 @@ export default function Location() {
                     <div className="flex flex-col justify-center items-center ">
                         <Headset size={50} color="#000" />
                         <p className="mt-2 mb-2">Телефон</p>
-                        <a href="tel:+998772996000">+998 77 299 60 00</a>
+                        <Link href="tel:+998772996000">+998 77 299 60 00</Link>
                     </div>
 
                     <div className="flex flex-col justify-center items-center">
@@ -74,7 +75,7 @@ export default function Location() {
                     <div className="flex flex-col justify-center items-center">
                         <Mail size={50} color="#000" />
                         <p className="mt-2 mb-2">EMAIL</p>
-                        <a href="mailto:info@Bomi.uz">info@Bomi.uz</a>
+                        <Link href="mailto:info@Bomi.uz">info@Bomi.uz</Link>
 
                     </div>
                 </div>
