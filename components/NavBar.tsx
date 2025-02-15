@@ -5,6 +5,7 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/logo.png";
+import Link from "next/link";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false); // Бургер-меню
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown
@@ -62,40 +63,40 @@ export default function NavBar() {
 
           {/* Меню для больших экранов */}
           <ul className="flex flex-col nav-list mb-5">
-            <li><a onClick={(e) => {
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className=" text-xl nav__link">О нас</a></li>
+            }} href="/#" className=" text-xl nav__link">О нас</Link></li>
 
 
-            <li><a onClick={(e) => {
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("aboutProject")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">О проекте</a></li>
+            }} href="/#" className="hover:text-gray-400 text-xl nav__link">О проекте</Link></li>
 
 
 
-            <li><a onClick={(e) => {
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("concept")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Концепция   </a></li>
-            <li><a onClick={(e) => {
+            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Концепция   </Link></li>
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("comfort")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Комфорт          </a></li>
-            <li><a onClick={(e) => {
+            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Комфорт          </Link></li>
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("safety")?.scrollIntoView({ behavior: "smooth" });
             }} href="/#" className="hover:text-gray-400 text-xl nav__link">Безопасность
-            </a></li>
-            <li><a onClick={(e) => {
+            </Link></li>
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("location")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Локация</a></li>
-            <li><a onClick={(e) => {
+            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Локация</Link></li>
+            <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Контакты</a></li>
+            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Контакты</Link></li>
 
             {/* Dropdown меню */}
 
