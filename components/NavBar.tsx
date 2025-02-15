@@ -8,9 +8,13 @@ import logo from "@/public/logo.png";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false); // Бургер-меню
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown
-  const [position, setPosition] = React.useState("ru");
+  // const [position, setPosition] = React.useState("ru");
   const [scrolled, setScrolled] = useState(false);
-
+  
+  console.log(isDropdownOpen);
+  // console.log(position);
+  
+  
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

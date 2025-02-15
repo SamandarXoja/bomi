@@ -8,7 +8,7 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import imgBomi from "@/public/images/bomic.jpg"
-import imgBomi2 from "@/public/images/bomic2.webp";
+// import imgBomi2 from "@/public/images/bomic2.webp";
 
 export default function Designers() {
     return (
