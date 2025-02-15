@@ -50,11 +50,11 @@ export default function Designers() {
                     </div>
                   </div>
                 </div>
-
+ 
               </div>
 
             </SwiperSlide>
-            <SwiperSlide className="flex justify-center items-center ">
+            <SwiperSlide className="flex justify-center items-center ">       
               <div className="container mx-auto px-4 relative mt-[130px]">
                 <Image
                   className="w-full max-w-[350px] min-h-[350px] object-cover rounded-2xl mx-auto absolute top-[-80px] left-[40px]"
