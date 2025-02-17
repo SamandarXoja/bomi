@@ -57,7 +57,7 @@ export default function NavBar() {
           {/* Логотип */}
           <div className="nav-logo">
 
-            <Image src={logo} width={200} height={200} alt="logo" />
+            <Image className="w-[130px]" src={logo} width={200} height={200} alt="logo" />
 
           </div>
 

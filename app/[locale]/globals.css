@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @layer base {
@@ -34,6 +34,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -66,6 +67,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -83,13 +85,14 @@ body {
   /* Фиксируем наверху */
   top: 60px;
   /* Отступ сверху */
-  left: 5%;
+  left: 2.4%;
   transform: translateX(-20%);
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 20px;
   transition: background-color 0.3s ease-in-out, top 0.3s ease-in-out;
+  width: 180px;
 }
 
 /* Когда скроллим — делаем nav менее прозрачным */
@@ -115,7 +118,7 @@ body {
   transition: 0.3s;
 }
 
-.nav__link:hover{
+.nav__link:hover {
   color: #A52A2A;
 }
 
@@ -208,3 +211,22 @@ body {
   min-height: 600px;
   margin-bottom: 100px;
 }
+
+.lines {
+  display: block;
+  position: relative;
+}
+
+.lines::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  border-right: 1px solid #cdcdcd;
+  top: 30px;
+  height: 84px;
+}
+
+/* .lines{
+  border-right: 1px solid #cdcdcd;
+  height: 100px;
+} */

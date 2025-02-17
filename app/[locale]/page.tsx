@@ -2,9 +2,11 @@
 
 
 // import { Link } from "@/i18n/routing";
-// import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import banner from "@/public/images/bomi-banner.jpg";
+// import banner1 from "@/public/images/bomi-banner-1.jpg";
+import banner2 from "@/public/images/bomi-banner-2.jpg";
 import OurProject from "@/components/our-project";
 
 import card1 from "@/public/cards-1/card-1.jpg"
@@ -22,62 +24,131 @@ import safe from "@/public/images/safe.jpg"
 import Designers from "@/components/designers";
 import Location from "@/components/location";
 
+import cards2 from "@/public/images/cards.jpg";
+
+import cards3 from "@/public/images/cards/cards03.jpg"
+import cards4 from "@/public/images/cards/img_9738-1.jpg"
+
+import cards5 from "@/public/images/cards/project-02.jpg";
+import cards6 from "@/public/images/cards/project-08-1-2.jpg";
+import cards7 from "@/public/images/cards/project-05.jpg";
+import cards8 from "@/public/images/cards/2-20.jpg";
+
+import cards9 from "@/public/images/cards/project-07-1.jpg"
+
 
 
 export default async function HomePage() {
-  // const t = await getTranslations("HomePage");
+  const t = await getTranslations("HomePage");
+  console.log(t);
+
   return (
     <div>
       {/* <h1>{t("title")}</h1> */}
       {/* <Link href='/contact'>{t("contact")}</Link> */}
 
-      <div className="bg-slate-900">
-        <Image className="w-full banner" src={banner} width={1000} height={500} alt="img" />
+      <div className="">
+        <Image className="w-full" src={banner2} width={1000} height={500} alt="img" />
       </div>
       <OurProject />
       <section className="pt-[100px]" id="aboutProject">
         <div className="container mx-auto px-4">
-          <h2 className="font-bold text-[35px] text-black mb-6">BOMI FINANCE CENTER </h2>
-          <div className="w-[70px] h-[10px] bg-red-700 mb-6"></div>
-          <div className="max-w-[1085px] w-full">
-            <p className="text-[#6F7278] mb-6 text-lg">Bomi Finance Center (бизнес-центр) расположен в МДЦ «Tashkent City», который является успешным проектом на национальном уровне.</p>
-            <p className="text-[#6F7278] text-lg">Здание расположено прямо на главной улице и имеет преимущество в том, что к нему легко добраться, поскольку оно находится рядом с транспортными средствами (метро, автобус). Кроме того, это место имеет множество географических преимуществ, поскольку поблизости расположены правительственные учреждения и объекты общего обслуживания. </p>
+          <h2 className="font-bold text-center text-[28px] text-black mb-6">BOMI FINANCE CENTER </h2>
+          {/* <div className="w-[70px] h-[10px] bg-red-700 mb-6"></div> */}
+          <div className="max-w-[1085px] mx-auto w-full">
+            <p className="text-[#6F7278] mb-6 text-lg text-center">Bomi Finance Center</p>
+            {/* <p className="text-[#6F7278] text-lg">Здание расположено прямо на главной улице и имеет преимущество в том, что к нему легко добраться, поскольку оно находится рядом с транспортными средствами (метро, автобус). Кроме того, это место имеет множество географических преимуществ, поскольку поблизости расположены правительственные учреждения и объекты общего обслуживания. </p> */}
           </div>
 
         </div>
         <div className="overflow-hidden mt-14">
-          <div className="grid grid-cols-3 gap-2 w-screen overflow-hidden">
-            <Image
-              src={card1}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-            />
-            <Image
-              src={card2}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-            />
-            <Image
-              src={card3}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-            />
-            <Image
-              src={card1}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-            />
-            <Image
-              src={card2}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-            />
-            <Image
-              src={card3}
-              alt=""
-              className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-            />
+          <div className="container mx-auto px-4 flex flex-wrap gap-[1px]">
+            <div className="relative group">
+              <Image
+                src={cards2}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+
+            <div className="relative group">
+              <Image
+                src={cards3}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+
+            <div className="relative group">
+              <Image
+                src={cards4}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards5}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards6}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards7}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards8}
+                alt=""
+                className="w-[374px] h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards9}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards2}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+            <div className="relative group">
+              <Image
+                src={cards2}
+                alt=""
+                className="w-[374px] min-h-[440px] object-cover transition-transform "
+              />
+              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+            </div>
+
+            {/* Повторите для остальных картин */}
           </div>
+
         </div>
 
       </section>
@@ -110,6 +181,10 @@ export default async function HomePage() {
 
           </div>
         </div>
+
+
+
+
       </section>
       <Comfort />
       <section className="mt-[140px]" id="safety">
@@ -140,7 +215,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-      <Designers /> 
+      <Designers />
       <Location />
 
     </div>

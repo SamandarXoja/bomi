@@ -17,92 +17,108 @@ import cardBuilding5 from "@/public/card-buildings/project-08-1-thumbnail-1.jpg"
 import cardBuilding6 from "@/public/card-buildings/project-08-thumbnail.jpg";
 import cardBuilding7 from "@/public/card-buildings/unnamed-file-65.jpg";
 
+import about from "@/public/images/imgt.jpg"
+import about1 from "@/public/images/bomi-banner-1.jpg"
+import { Building, Handshake, Lightbulb, ShieldCheck } from "lucide-react";
+
+
+
+
 
 
 export default function OurProject() {
+
+
+
     return (
         <section className="bg-[#fff] pt-[100px]" id="about">
             <div className="mb-[100px]">
-                <div className="container mx-auto px-4 ">
-                    <h2 className="font-bold text-[35px] text-black mb-6">Bomi E&C </h2>
-                    <p className="text-[#45525B] text-lg">Bomi E&C — ведущая строительная компания с более чем 30-летним опытом работы в отрасли. Мы предоставляем полный спектр услуг, включая</p>
-                    <p className="text-[#45525B] text-lg">проектирование, строительство и сдачу объектов «под ключ», обеспечивая строгий контроль качества на всех этапах.</p>
-                    <p className="mt-4 backdrop: text-[#45525B] text-lg">Наша команда ориентирована на высокие стандарты, инновационные подходы и долговечность объектов.</p>
+                <div className="container mx-auto px-4">
+                    <h2 className="font-bold text-[28px] text-[#303030] mb-6">Bomi E&C</h2>
 
-                    <p className="mt-2 text-lg ">Наши ценности:</p>
-                    <div className="flex gap-1 flex-col">
-                        <p className="text-[#6F7278] text-lg">• Профессионализм: Использование передовых технологий и методов.</p>
-                        <p className="text-[#6F7278] text-lg">• Качество и надежность: Строгое соблюдение стандартов и долговечность объектов.</p>
-                        <p className="text-[#6F7278] text-lg">• Инновации: Внедрение современных решений для оптимизации каждого проекта.</p>
-                        <p className="text-[#6F7278] text-lg">• Опыт: Более 30 лет успешной практики в строительной отрасли. </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        {/* Картинка */}
+                        <div className="relative w-full">
+                            <Image
+                                src={about1}
+                                alt="О компании Bomi E&C"
+                                className="w-full h-auto object-cover rounded-lg shadow-lg"
+                                width={600}
+                                height={400}
+                            />
+                            {/* Белый оверлей при наведении */}
+                            <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
+                        </div>
+
+                        {/* Текст */}
+                        <div>
+                            <p className="text-[#000] text-xl leading-[170%]">
+                                Bomi E&C — ведущая строительная компания с более чем 30-летним опытом работы в отрасли.
+                                Мы предоставляем полный спектр услуг, включая проектирование, строительство и сдачу
+                                объектов «под ключ», обеспечивая строгий контроль качества на всех этапах.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="container px-4 mx-auto">
 
 
-                <div className="flex gap-4 flex-wrap mt-[40px] mb-[40px]">
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={30}
-                        freeMode={true}
-                        autoplay={{
-                            delay: 2000, // Задержка перед сменой слайда (2 секунды)
-                            disableOnInteraction: false, // Автоплей не отключается после взаимодействия
-                        }}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[FreeMode, Pagination, Autoplay]}
+                    {/* Блок с цифрами */}
+                    <div className="bg-[#f8f8f8] rounded-[10px] mt-28 py-[45px] px-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <b className="font-bold text-[35px] text-[#272727]">+30</b>
+                            <p className="text-[#272727] text-xl">лет на рынке</p>
+                        </div>
 
-                        className="mySwiper"
-                    >
-                        <SwiperSlide>
+                        <div className="border-l border-gray-300 pl-6">
+                            <b className="font-bold text-[35px] text-[#272727]">2 млн м²</b>
+                            <p className="text-[#272727] text-xl">недвижимости в продаже</p>
+                        </div>
 
-                            <Image className="rounded-[25px] project_card" src={cardBuilding} width={450} height={400} alt="" />
+                        <div className="border-l border-gray-300 pl-6">
+                            <b className="font-bold text-[35px] text-[#272727]">25</b>
+                            <p className="text-[#272727] text-xl">объектов в реализации</p>
+                        </div>
 
-                        </SwiperSlide>
-                        <SwiperSlide>
+                        <div className="border-l border-gray-300 pl-6">
+                            <b className="font-bold text-[35px] text-[#272727]">30 тыс.</b>
+                            <p className="text-[#272727] text-xl">человек проживают в наших домах</p>
+                        </div>
+                    </div>
 
-                            <Image className="rounded-[25px] project_card" src={cardBuilding1} width={450} height={400} alt="" />
 
-                        </SwiperSlide>
-                        <SwiperSlide>
+                    {/* Таймлайн компании */}
+                    <div className="mt-16">
+                        <h3 className="font-bold text-[28px] text-[#303030] text-center mb-8">Наш путь к успеху</h3>
 
-                            <Image className="rounded-[25px] project_card" src={cardBuilding2} width={450} height={400} alt="" />
+                        <div className="relative border-l-4 border-[#272727] pl-6 space-y-8">
+                            <div>
+                                <h4 className="font-bold text-xl text-[#272727]">1993</h4>
+                                <p className="text-[#6F7278] text-lg">Основание компании. Первые проекты в жилой застройке.</p>
+                            </div>
 
-                        </SwiperSlide>
-                        <SwiperSlide>
+                            <div>
+                                <h4 className="font-bold text-xl text-[#272727]">2005</h4>
+                                <p className="text-[#6F7278] text-lg">Расширение в коммерческое строительство. Открытие филиалов.</p>
+                            </div>
 
-                            <Image className="rounded-[25px] project_card" src={cardBuilding3} width={450} height={400} alt="" />
+                            <div>
+                                <h4 className="font-bold text-xl text-[#272727]">2015</h4>
+                                <p className="text-[#6F7278] text-lg">Запуск первых эко-комплексов с "зелеными" технологиями.</p>
+                            </div>
 
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <Image className="rounded-[25px] project_card" src={cardBuilding4} width={450} height={400} alt="" />
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <Image className="rounded-[25px] project_card" src={cardBuilding5} width={450} height={400} alt="" />
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <Image className="rounded-[25px] project_card" src={cardBuilding6} width={450} height={400} alt="" />
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-
-                            <Image className="rounded-[25px] project_card" src={cardBuilding7} width={450} height={400} alt="" />
-
-                        </SwiperSlide>
-
-                    </Swiper>
+                            <div>
+                                <h4 className="font-bold text-xl text-[#272727]">2024</h4>
+                                <p className="text-[#6F7278] text-lg">Лидер рынка. 2 млн м² недвижимости. Строим города будущего.</p>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
             </div>
+            {/* Блок с ценностями */}
+            
+
+
         </section>
     )
 }
