@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 // import banner from "@/public/images/bomi-banner.jpg";
 // import banner1 from "@/public/images/bomi-banner-1.jpg";
-import banner2 from "@/public/images/bomi-banner-2.jpg";
+import banner2 from "@/public/images/bomi-main-2.jpg";
 import OurProject from "@/components/our-project";
 
 // import card1 from "@/public/cards-1/card-1.jpg"
@@ -50,15 +50,15 @@ export default async function HomePage() {
       {/* <Link href='/contact'>{t("contact")}</Link> */}
 
       <div className="">
-        <Image className="w-full" src={banner2} width={1000} height={500} alt="img" />
+        <Image className="w-full" priority src={banner2} objectFit="cover" unoptimized alt="img" />
       </div>
       <OurProject />
       <section className="pt-[100px]" id="aboutProject">
         <div className="container mx-auto px-4">
-          <h2 className="font-bold text-center text-[28px] text-black mb-6">BOMI FINANCE CENTER </h2>
+          <h2 className="font-bold text-center text-[28px] text-black mb-6">BOMI FINANCE CENTER  PROJECT</h2>
           {/* <div className="w-[70px] h-[10px] bg-red-700 mb-6"></div> */}
           <div className="max-w-[1085px] mx-auto w-full">
-            <p className="text-[#6F7278] mb-6 text-lg text-center">Bomi Finance Center</p>
+            <p className="text-[#6F7278] mb-6 text-lg text-center">Наши проекты</p>
             {/* <p className="text-[#6F7278] text-lg">Здание расположено прямо на главной улице и имеет преимущество в том, что к нему легко добраться, поскольку оно находится рядом с транспортными средствами (метро, автобус). Кроме того, это место имеет множество географических преимуществ, поскольку поблизости расположены правительственные учреждения и объекты общего обслуживания. </p> */}
           </div>
 
@@ -165,15 +165,17 @@ export default async function HomePage() {
 
         <div className="grid grid-cols-2 gap-6 items-start container mx-auto px-4">
           {/* Первый блок (Картинка + Текст) */}
-          <div className="flex flex-col items-center text-center relative group">
+          <div className="relative group w-full h-[500px] overflow-hidden rounded-[30px]">
             <Image
-              className="rounded-[30px] w-full object-cover h-[500px]"
+              className="w-full h-full object-cover"
               src={registon4}
               priority
               alt="Registon 4"
             />
+            {/* Затемнение */}
             <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="max-w-[900px] w-full mt-6 group-hover:translate-y-0 translate-y-12 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+            {/* Текст */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <h3 className="text-[25px] font-medium text-black">Registan</h3>
               <p className="mt-4 text-lg text-[#272727]">
                 Культурный фестиваль в Самарканде имеет золотую художественную площадь, которая источает ослепительную красоту.
@@ -182,15 +184,17 @@ export default async function HomePage() {
           </div>
 
           {/* Второй блок (Картинка + Текст) */}
-          <div className="flex flex-col items-center text-center relative group">
+          <div className="relative group w-full h-[500px] overflow-hidden rounded-[30px]">
             <Image
-              className="rounded-[30px] w-full h-[500px] object-cover"
+              className="w-full h-full object-cover"
               src={moonJar}
               priority
               alt="Moon Jar"
             />
+            {/* Затемнение */}
             <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="max-w-[900px] w-full mt-6 group-hover:translate-y-0 translate-y-12 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+            {/* Текст */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <h3 className="text-[25px] font-medium">Moon Jar</h3>
               <p className="mt-4 text-lg text-[#272727]">
                 Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.
@@ -204,38 +208,19 @@ export default async function HomePage() {
 
 
 
-
-
-
       </section>
       <Comfort />
-      <section className="mt-[140px]" id="safety">
+      <section className="mt-[170px]" id="safety">
+
+
         <div className="container mx-auto px-4">
+          <h2 className="text-[30px] font-bold text-center mb-11">Безопасность</h2>
           {/* Первый блок: картинка сверху, текст снизу */}
-          <div className="mb-[80px] flex flex-col items-center gap-4">
-            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
-              <Image
-                className="rounded-xl shadow-md"
-                src={persons}
-                width={500}
-                height={400}
-                alt="persons"
-              />
-            </div>
-            <div className="w-full text-center">
-              <h3 className="text-3xl font-semibold text-[#000]">Проектирование структуры</h3>
-              <b className="block mt-5 text-lg text-[#272727]">Хакимов Шамил Абдуллаевич</b>
-              <p className="text-[#4A5568]">(В настоящее время)</p>
-              <p className="mt-5  leading-relaxed text-[#272727] text-lg">
-                Доктор, академик Международной инженерной академии, международный эксперт по защите строительных конструкций от землетрясений и горных опасностей
-              </p>
-              <p className="text-[#272727] text-lg mt-2">(сертификат специалиста № 104) Вице-президент.</p>
-            </div>
-          </div>
+
 
           {/* Второй блок: текст сверху, картинка снизу */}
           <div className="mb-[80px] flex flex-col items-center gap-4">
-          <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
+            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
               <Image
                 className="rounded-xl shadow-md"
                 src={safe}
@@ -244,7 +229,7 @@ export default async function HomePage() {
                 alt="safe"
               />
             </div>
-            <div className="w-full text-center">
+            <div className="max-w-[500px] text-center">
               <h3 className="text-3xl font-semibold text-[#000]">СИСТЕМА СЕЙСМОСТОЙКОСТИ</h3>
               <p className="mt-5 text-[#272727] leading-relaxed text-lg">
                 Сейсмическая конструкция имеет рейтинг 9, что обеспечивает высокий уровень устойчивости к стихийным бедствиям.
@@ -256,7 +241,28 @@ export default async function HomePage() {
                 Сейсмостойкость — это не только требование безопасности, но и залог вашего комфорта и уверенности в защите вашего бизнеса.
               </p> */}
             </div>
-            
+
+          </div>
+          <div className="mb-[80px] flex flex-col items-center gap-4">
+            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
+              <Image
+                className="rounded-xl shadow-md"
+                src={persons}
+                // width={500}
+                // height={400}
+                alt="persons"
+                unoptimized
+              />
+            </div>
+            <div className="max-w-[500px] text-center">
+              <h3 className="text-3xl font-semibold text-[#000]">Проектирование структуры</h3>
+              <b className="block mt-5 text-lg text-[#272727]">Хакимов Шамил Абдуллаевич</b>
+              <p className="text-[#4A5568]">(В настоящее время)</p>
+              <p className="mt-5  leading-relaxed text-[#272727] text-lg">
+                Доктор, академик Международной инженерной академии, международный эксперт по защите строительных конструкций от землетрясений и горных опасностей
+              </p>
+              <p className="text-[#272727] text-lg mt-2">(сертификат специалиста № 104) Вице-президент.</p>
+            </div>
           </div>
         </div>
 

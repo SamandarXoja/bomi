@@ -53,7 +53,7 @@ export default function OurProject() {
                         {/* Текст */}
                         <div>
                             <p className="text-[#000] text-xl leading-[170%]">
-                                Bomi E&C — ведущая строительная компания с более чем 30-летним опытом работы в отрасли.
+                                Bomi E&C — ведущая строительная компания с более чем 30-летним опытом работы в отрасли в Корее.
                                 Мы предоставляем полный спектр услуг, включая проектирование, строительство и сдачу
                                 объектов «под ключ», обеспечивая строгий контроль качества на всех этапах.
                             </p>
@@ -62,26 +62,26 @@ export default function OurProject() {
 
 
                     {/* Блок с цифрами */}
-                    <div className="bg-[#f8f8f8] rounded-[10px] mt-28 py-[45px] px-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div className="bg-[#f8f8f8] rounded-[10px] mt-28 py-[45px] px-9 flex justify-center gap-28 text-center">
                         <div>
-                            <b className="font-bold text-[35px] text-[#272727]">+30</b>
+                            <b className="font-bold text-[35px] text-[#272727]">+37</b>
                             <p className="text-[#272727] text-xl">лет на рынке</p>
                         </div>
 
-                        <div className="border-l border-gray-300 pl-6">
+                        <div className="border-l border-gray-300  pl-[70px]">
                             <b className="font-bold text-[35px] text-[#272727]">2 млн м²</b>
                             <p className="text-[#272727] text-xl">недвижимости в продаже</p>
                         </div>
 
-                        <div className="border-l border-gray-300 pl-6">
+                        <div className="border-l border-gray-300 pl-[70px]">
                             <b className="font-bold text-[35px] text-[#272727]">25</b>
                             <p className="text-[#272727] text-xl">объектов в реализации</p>
                         </div>
 
-                        <div className="border-l border-gray-300 pl-6">
+                        {/* <div className="border-l border-gray-300 pl-6">
                             <b className="font-bold text-[35px] text-[#272727]">30 тыс.</b>
                             <p className="text-[#272727] text-xl">человек проживают в наших домах</p>
-                        </div>
+                        </div> */}
                     </div>
 
 
@@ -91,23 +91,23 @@ export default function OurProject() {
 
                         <div className="relative border-l-4 border-[#272727] pl-6 space-y-8">
                             <div>
-                                <h4 className="font-bold text-xl text-[#000]">1993</h4>
-                                <p className="text-[#272727] text-lg">Основание компании. Первые проекты в жилой застройке.</p>
+                                <h4 className="font-bold text-xl text-[#000]">1988</h4>
+                                <p className="text-[#272727] text-lg">Создание жилищного фонда BOMI</p>
                             </div>
 
                             <div>
-                                <h4 className="font-bold text-xl text-[#000]">2005</h4>
-                                <p className="text-[#272727] text-lg">Расширение в коммерческое строительство. Открытие филиалов.</p>
+                                <h4 className="font-bold text-xl text-[#000]">1992</h4>
+                                <p className="text-[#272727] text-lg">Основание корпорации BOMI.</p>
                             </div>
 
                             <div>
-                                <h4 className="font-bold text-xl text-[#000]">2015</h4>
-                                <p className="text-[#272727] text-lg">Запуск первых эко-комплексов с зелеными технологиями.</p>
+                                <h4 className="font-bold text-xl text-[#000]">1994</h4>
+                                <p className="text-[#272727] text-lg">Увеличение капитала (400 000 000 фунтов стерлингов) Переезд головного офиса</p>
                             </div>
 
                             <div>
-                                <h4 className="font-bold text-xl text-[#000]">2024</h4>
-                                <p className="text-[#272727] text-lg">Лидер рынка. 2 млн м² недвижимости. Строим города будущего.</p>
+                                <h4 className="font-bold text-xl text-[#000]">1997</h4>
+                                <p className="text-[#272727] text-lg">Переезд головного офиса (661, Дынччо-дон, Кансо-ку, Сеул)</p>
                             </div>
                         </div>
                     </div>

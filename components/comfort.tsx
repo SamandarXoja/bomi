@@ -41,8 +41,8 @@ export default function Comfort() {
                         // fill
                         />
                         <div className="text-center mt-9">
-                            <h3 className="text-[30px] text-black font-bold">Lorem ipsum dolor sit.</h3>
-                            <p className="mt-4 max-w-[1200px] mx-auto text-[#272727] text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi ipsum aliquam odit, quasi officiis dicta maxime libero facere, tempore aspernatur explicabo totam maiores recusandae aut, quos deserunt blanditiis asperiores.</p>
+                            <h3 className="text-[30px] text-black font-bold">Пространства для вашего бизнеса</h3>
+                            <p className="mt-4 max-w-[1200px] mx-auto text-[#272727] text-lg">Мы предлагаем вам современную и высококачественную недвижимость</p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="flex justify-center items-center">
@@ -55,8 +55,8 @@ export default function Comfort() {
                         />
 
                         <div className="text-center mt-9">
-                            <h3 className="text-[30px] text-black font-bold">Lorem ipsum dolor sit.11</h3>
-                            <p className="mt-4 max-w-[1200px] mx-auto text-[#272727] text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea excepturi ipsum aliquam odit, quasi officiis dicta maxime libero facere, tempore aspernatur explicabo totam maiores recusandae aut, quos deserunt blanditiis asperiores.</p>
+                            <h3 className="text-[30px] text-black font-bold">Статус и возможности</h3>
+                            <p className="mt-4 max-w-[1200px] mx-auto text-[#272727] text-lg">Который подчеркнет статус вашей компании и станет идеальным местом для работы</p>
                         </div>
                     </SwiperSlide>
                 </Swiper>

@@ -4,18 +4,18 @@ import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "@/public/logo.png";
+import logo from "@/public/images/logoBomi.png";
 import Link from "next/link";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false); // Бургер-меню
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown
   // const [position, setPosition] = React.useState("ru");
   const [scrolled, setScrolled] = useState(false);
-  
+
   console.log(isDropdownOpen);
   // console.log(position);
-  
-  
+
+
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
