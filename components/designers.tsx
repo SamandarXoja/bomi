@@ -11,6 +11,9 @@ import imgBomi from "@/public/images/bomic.jpg"
 // import imgBomi2 from "@/public/images/bomic2.webp";
 
 export default function Designers() {
+
+// bg-[#f8f8f8]
+
   return (
     <section className="mt-[130px]" >
       <div className="container  mx-auto px-4">
@@ -30,8 +33,8 @@ export default function Designers() {
                 height={350}
                 alt=""
               />
-              <div className=" flex justify-end ">
-                <div className="bg-[#0255950D] max-w-[1240px] w-full min-h-[350px] rounded-2xl">
+              <div className="flex justify-end ">
+                <div className="bg-[#f8f8f8] max-w-[1240px] w-full min-h-[350px] rounded-2xl">
                   <div className="max-w-[1030px] w-full  ml-[170px] pt-[15px]">
                     <h3 className="font-semibold uppercase text-[#000] text-xl">Park Seon</h3>
                     <p className="text-[#272727] text-lg mt-[15px] mb-[15px]">Архитектур Дизайн</p>
@@ -64,7 +67,7 @@ export default function Designers() {
                 alt=""
               />
               <div className=" flex justify-end ">
-                <div className="bg-[#0255950D] max-w-[1240px] w-full min-h-[350px] rounded-2xl">
+                <div className="bg-[#f8f8f8] max-w-[1240px] w-full min-h-[350px] rounded-2xl">
                   <div className="max-w-[1030px] w-full  ml-[170px] pt-[15px]">
                     <h3 className="font-semibold uppercase text-[#000] text-xl">Park You Jin </h3>
                     <p className="text-[#272727] mt-[15px] mb-[15px] text-lg">Архитектур Дизайн</p>

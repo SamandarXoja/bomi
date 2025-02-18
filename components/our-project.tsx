@@ -102,7 +102,7 @@ export default function OurProject() {
 
                             <div>
                                 <h4 className="font-bold text-xl text-[#000]">2015</h4>
-                                <p className="text-[#272727] text-lg">Запуск первых эко-комплексов с "зелеными" технологиями.</p>
+                                <p className="text-[#272727] text-lg">Запуск первых эко-комплексов с зелеными технологиями.</p>
                             </div>
 
                             <div>
