@@ -1,21 +1,18 @@
-
-
-
 // import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import banner from "@/public/images/bomi-banner.jpg";
+// import banner from "@/public/images/bomi-banner.jpg";
 // import banner1 from "@/public/images/bomi-banner-1.jpg";
 import banner2 from "@/public/images/bomi-banner-2.jpg";
 import OurProject from "@/components/our-project";
 
-import card1 from "@/public/cards-1/card-1.jpg"
-import card2 from "@/public/cards-1/card2.jpg"
-import card3 from "@/public/cards-1/card.png"
+// import card1 from "@/public/cards-1/card-1.jpg"
+// import card2 from "@/public/cards-1/card2.jpg"
+// import card3 from "@/public/cards-1/card.png"
 
-import imgResiton from "@/public/images/registon.jpg"
+// import imgResiton from "@/public/images/registon.jpg"
 
-import imgResiton3 from "@/public/images/vase2.jpg"
+// import imgResiton3 from "@/public/images/vase2.jpg"
 import Comfort from "@/components/comfort";
 
 
@@ -34,7 +31,12 @@ import cards6 from "@/public/images/cards/project-08-1-2.jpg";
 import cards7 from "@/public/images/cards/project-05.jpg";
 import cards8 from "@/public/images/cards/2-20.jpg";
 
-import cards9 from "@/public/images/cards/project-07-1.jpg"
+import cards9 from "@/public/images/cards/project-07-1.jpg";
+
+import registon4 from "@/public/images/reg.jpg";
+
+import moonJar from "@/public/images/jar2.webp"
+
 
 
 
@@ -161,26 +163,46 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            <Image className="rounded-[30px]" src={imgResiton} width={480} height={588} alt="" />
-            <div className="max-w-[900px] w-full mt-6">
-              <h3 className="text-[25px] font-medium">Moon Jar</h3>
-              <p className="mt-4 text-lg text-[#6F7278]">Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.</p>
-              <p className="mt-6 text-lg text-[#6F7278]">Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части лунного кувшина и современное серебристое стекло.</p>
+        <div className="grid grid-cols-2 gap-6 items-start container mx-auto px-4">
+          {/* Первый блок (Картинка + Текст) */}
+          <div className="flex flex-col items-center text-center relative group">
+            <Image
+              className="rounded-[30px] w-full object-cover h-[500px]"
+              src={registon4}
+              priority
+              alt="Registon 4"
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="max-w-[900px] w-full mt-6 group-hover:translate-y-0 translate-y-12 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+              <h3 className="text-[25px] font-medium text-black">Registan</h3>
+              <p className="mt-4 text-lg text-[#272727]">
+                Культурный фестиваль в Самарканде имеет золотую художественную площадь, которая источает ослепительную красоту.
+              </p>
             </div>
-
           </div>
-          <div className="flex flex-wrap justify-between mt-20">
-            <div className="max-w-[900px] w-full mt-6">
-              <h3 className="text-[25px] font-medium">Moon Jar</h3>
-              <p className="mt-4 text-lg text-[#6F7278]">Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.</p>
-              <p className="mt-6 text-lg text-[#6F7278]">Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части лунного кувшина и современное серебристое стекло.</p>
-            </div>
-            <Image className="rounded-[30px]" src={imgResiton3} width={480} height={588} alt="" />
 
+          {/* Второй блок (Картинка + Текст) */}
+          <div className="flex flex-col items-center text-center relative group">
+            <Image
+              className="rounded-[30px] w-full h-[500px] object-cover"
+              src={moonJar}
+              priority
+              alt="Moon Jar"
+            />
+            <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="max-w-[900px] w-full mt-6 group-hover:translate-y-0 translate-y-12 transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+              <h3 className="text-[25px] font-medium">Moon Jar</h3>
+              <p className="mt-4 text-lg text-[#272727]">
+                Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.
+              </p>
+              <p className="mt-6 text-lg text-[#272727]">
+                Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части лунного кувшина и современное серебристое стекло.
+              </p>
+            </div>
           </div>
         </div>
+
+
 
 
 
@@ -189,31 +211,56 @@ export default async function HomePage() {
       <Comfort />
       <section className="mt-[140px]" id="safety">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-[40px]">
-            <Image className="rounded-2xl" src={persons} width={500} height={400} alt="persons" />
-            <div className="max-w-[920px] w-full">
-              <h3 className="text-3xl font-medium">Проектирование структуры</h3>
-              <b className="block mt-5 mb-5 text-l">Хакимов Шамил Абдуллаевич</b>
-              <p> (В настоящее время)</p>
-              <p className="mt-5 mb-5 text-[#6F7278]">Доктор, академик Международной инженерной академии, международный эксперт по защите строительных конструк ций от землетрясений и горных опасностей (сертификат спе циалиста № 104) Вице-президент</p>
-              {/* <p className="text-[#6F7278]">Евро-Азиатской ассоциации инженерной с ейсмологии и сейсмостойкого строительства. Почетный член президиума Международной ассоциации э кспертов по сейсмостойкому строительству, член редколле гии ряда зарубежных журналов по сейсмостойкому строите льству. Почетный профессор ряда зарубежных университетов.</p> */}
+          {/* Первый блок: картинка сверху, текст снизу */}
+          <div className="mb-[80px] flex flex-col items-center gap-4">
+            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
+              <Image
+                className="rounded-xl shadow-md"
+                src={persons}
+                width={500}
+                height={400}
+                alt="persons"
+              />
+            </div>
+            <div className="w-full text-center">
+              <h3 className="text-3xl font-semibold text-[#000]">Проектирование структуры</h3>
+              <b className="block mt-5 text-lg text-[#272727]">Хакимов Шамил Абдуллаевич</b>
+              <p className="text-[#4A5568]">(В настоящее время)</p>
+              <p className="mt-5  leading-relaxed text-[#272727] text-lg">
+                Доктор, академик Международной инженерной академии, международный эксперт по защите строительных конструкций от землетрясений и горных опасностей
+              </p>
+              <p className="text-[#272727] text-lg mt-2">(сертификат специалиста № 104) Вице-президент.</p>
             </div>
           </div>
-          <div className="flex flex-wrap gap-[40px] mt-[80px]">
 
-            <div className="max-w-[920px] w-full">
-              <h3 className="text-3xl font-medium">СИСТЕМА СЕЙСМОСТОЙКОСТИ</h3>
-
-
-              <p className="mt-5 mb-5 text-[#6F7278]">Сейсмическая конструкция имеет рейтинг 9, что обеспечивает высокий уровень устойчивости к стихийным бедствиям.</p>
-              <p className="text-[#6F7278]">Это гарантия безопасности людей и сохранности имущества в случае землетрясения.
+          {/* Второй блок: текст сверху, картинка снизу */}
+          <div className="mb-[80px] flex flex-col items-center gap-4">
+            <div className="w-full text-center">
+              <h3 className="text-3xl font-semibold text-[#000]">СИСТЕМА СЕЙСМОСТОЙКОСТИ</h3>
+              <p className="mt-5 text-[#272727] leading-relaxed text-lg">
+                Сейсмическая конструкция имеет рейтинг 9, что обеспечивает высокий уровень устойчивости к стихийным бедствиям.
               </p>
-              <p className="text-[#6F7278] mt-5">Сейсмостойкость  — это не только требование безопасности, но и залог вашего комфорта и уверенности в защите вашего бизнеса.</p>
-
+              <p className="text-[#272727] leading-relaxed text-lg mt-2">
+                Это гарантия безопасности людей и сохранности имущества в случае землетрясения.
+              </p>
+              <p className="text-[#272727] mt-5 leading-relaxed text-lg">
+                Сейсмостойкость — это не только требование безопасности, но и залог вашего комфорта и уверенности в защите вашего бизнеса.
+              </p>
             </div>
-            <Image className="rounded-2xl max-w-[500px] h-[400px]" src={safe} width={500} height={400} alt="persons" />
+            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
+              <Image
+                className="rounded-xl shadow-md"
+                src={safe}
+                width={500}
+                height={400}
+                alt="safe"
+              />
+            </div>
           </div>
         </div>
+
+
+
       </section>
       <Designers />
       <Location />

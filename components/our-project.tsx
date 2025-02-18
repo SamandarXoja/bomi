@@ -2,24 +2,24 @@
 
 import Image from "next/image";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { FreeMode, Pagination } from 'swiper/modules';
-import { Autoplay } from "swiper/modules";
+// import { FreeMode, Pagination } from 'swiper/modules';
+// import { Autoplay } from "swiper/modules";
 
-import cardBuilding from "@/public/card-buildings/project-01-thumbnail.jpg";
-import cardBuilding1 from "@/public/card-buildings/project-02-thumbnail.jpg";
-import cardBuilding2 from "@/public/card-buildings/project-04-1-thumbnail.jpg";
-import cardBuilding3 from "@/public/card-buildings/project-05-thumbnail.jpg";
-import cardBuilding4 from "@/public/card-buildings/project-07-thumbnail-1.jpg";
-import cardBuilding5 from "@/public/card-buildings/project-08-1-thumbnail-1.jpg";
-import cardBuilding6 from "@/public/card-buildings/project-08-thumbnail.jpg";
-import cardBuilding7 from "@/public/card-buildings/unnamed-file-65.jpg";
+// import cardBuilding from "@/public/card-buildings/project-01-thumbnail.jpg";
+// import cardBuilding1 from "@/public/card-buildings/project-02-thumbnail.jpg";
+// import cardBuilding2 from "@/public/card-buildings/project-04-1-thumbnail.jpg";
+// import cardBuilding3 from "@/public/card-buildings/project-05-thumbnail.jpg";
+// import cardBuilding4 from "@/public/card-buildings/project-07-thumbnail-1.jpg";
+// import cardBuilding5 from "@/public/card-buildings/project-08-1-thumbnail-1.jpg";
+// import cardBuilding6 from "@/public/card-buildings/project-08-thumbnail.jpg";
+// import cardBuilding7 from "@/public/card-buildings/unnamed-file-65.jpg";
 
-import about from "@/public/images/imgt.jpg"
+// import about from "@/public/images/imgt.jpg"
 import about1 from "@/public/images/bomi-banner-1.jpg"
-import { Building, Handshake, Lightbulb, ShieldCheck } from "lucide-react";
+// import { Building, Handshake, Lightbulb, ShieldCheck } from "lucide-react";
 
 
 
@@ -87,27 +87,27 @@ export default function OurProject() {
 
                     {/* Таймлайн компании */}
                     <div className="mt-16">
-                        <h3 className="font-bold text-[28px] text-[#303030] text-center mb-8">Наш путь к успеху</h3>
+                        <h3 className="font-bold text-[28px] text-[#000] text-center mb-8">Наш путь к успеху</h3>
 
                         <div className="relative border-l-4 border-[#272727] pl-6 space-y-8">
                             <div>
-                                <h4 className="font-bold text-xl text-[#272727]">1993</h4>
-                                <p className="text-[#6F7278] text-lg">Основание компании. Первые проекты в жилой застройке.</p>
+                                <h4 className="font-bold text-xl text-[#000]">1993</h4>
+                                <p className="text-[#272727] text-lg">Основание компании. Первые проекты в жилой застройке.</p>
                             </div>
 
                             <div>
-                                <h4 className="font-bold text-xl text-[#272727]">2005</h4>
-                                <p className="text-[#6F7278] text-lg">Расширение в коммерческое строительство. Открытие филиалов.</p>
+                                <h4 className="font-bold text-xl text-[#000]">2005</h4>
+                                <p className="text-[#272727] text-lg">Расширение в коммерческое строительство. Открытие филиалов.</p>
                             </div>
 
                             <div>
-                                <h4 className="font-bold text-xl text-[#272727]">2015</h4>
-                                <p className="text-[#6F7278] text-lg">Запуск первых эко-комплексов с "зелеными" технологиями.</p>
+                                <h4 className="font-bold text-xl text-[#000]">2015</h4>
+                                <p className="text-[#272727] text-lg">Запуск первых эко-комплексов с "зелеными" технологиями.</p>
                             </div>
 
                             <div>
-                                <h4 className="font-bold text-xl text-[#272727]">2024</h4>
-                                <p className="text-[#6F7278] text-lg">Лидер рынка. 2 млн м² недвижимости. Строим города будущего.</p>
+                                <h4 className="font-bold text-xl text-[#000]">2024</h4>
+                                <p className="text-[#272727] text-lg">Лидер рынка. 2 млн м² недвижимости. Строим города будущего.</p>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function OurProject() {
                 </div>
             </div>
             {/* Блок с ценностями */}
-            
+
 
 
         </section>

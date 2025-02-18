@@ -3,7 +3,7 @@ import { Locale, routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import Footer from "@/components/footer";
