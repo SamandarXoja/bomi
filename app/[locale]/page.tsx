@@ -235,19 +235,7 @@ export default async function HomePage() {
 
           {/* Второй блок: текст сверху, картинка снизу */}
           <div className="mb-[80px] flex flex-col items-center gap-4">
-            <div className="w-full text-center">
-              <h3 className="text-3xl font-semibold text-[#000]">СИСТЕМА СЕЙСМОСТОЙКОСТИ</h3>
-              <p className="mt-5 text-[#272727] leading-relaxed text-lg">
-                Сейсмическая конструкция имеет рейтинг 9, что обеспечивает высокий уровень устойчивости к стихийным бедствиям.
-              </p>
-              <p className="text-[#272727] leading-relaxed text-lg mt-2">
-                Это гарантия безопасности людей и сохранности имущества в случае землетрясения.
-              </p>
-              <p className="text-[#272727] mt-5 leading-relaxed text-lg">
-                Сейсмостойкость — это не только требование безопасности, но и залог вашего комфорта и уверенности в защите вашего бизнеса.
-              </p>
-            </div>
-            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
+          <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
               <Image
                 className="rounded-xl shadow-md"
                 src={safe}
@@ -256,6 +244,19 @@ export default async function HomePage() {
                 alt="safe"
               />
             </div>
+            <div className="w-full text-center">
+              <h3 className="text-3xl font-semibold text-[#000]">СИСТЕМА СЕЙСМОСТОЙКОСТИ</h3>
+              <p className="mt-5 text-[#272727] leading-relaxed text-lg">
+                Сейсмическая конструкция имеет рейтинг 9, что обеспечивает высокий уровень устойчивости к стихийным бедствиям.
+              </p>
+              <p className="text-[#272727] leading-relaxed text-lg mt-2">
+                Это гарантия безопасности людей и сохранности имущества в случае землетрясения.
+              </p>
+              {/* <p className="text-[#272727] mt-5 leading-relaxed text-lg">
+                Сейсмостойкость — это не только требование безопасности, но и залог вашего комфорта и уверенности в защите вашего бизнеса.
+              </p> */}
+            </div>
+            
           </div>
         </div>
 
