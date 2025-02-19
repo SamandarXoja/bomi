@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // import { FreeMode, Pagination } from 'swiper/modules';
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import {  EffectCoverflow, Pagination } from "swiper/modules";
 
 
 import imgBomi from "@/public/images/comfort-11.jpg"
