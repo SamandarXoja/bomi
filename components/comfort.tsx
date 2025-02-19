@@ -7,22 +7,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // import { FreeMode, Pagination } from 'swiper/modules';
-import { Autoplay } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
 
-import imgBomi from "@/public/images/bomic.jpg"
-import imgBomi2 from "@/public/images/parkin.webp";
+import imgBomi from "@/public/images/comfort-11.jpg"
+import imgBomi2 from "@/public/images/comfort-10.jpg";
+import imgBomi3 from "@/public/images/comfort-12.jpg";
 
 
+import './comfort.css'
 
 export default function Comfort() {
     return (
-        <section className="mb-32" id="comfort">
+        <section className="" id="comfort">
             <div className="container mx-auto px-4">
-                <h2 className="mb-16 mt-[100px] text-[30px] font-bold text-center text-black">
+                <h2 className="mb-16 mt-[120px] text-[30px] font-bold text-center text-black">
                     Комфорт</h2>
             </div>
-            <div className="container mx-auto px-4">
+            {/* <div className="container mx-auto px-4">
                 <Swiper
                     className="mySwiper"
                     modules={[Autoplay]}
@@ -60,7 +62,40 @@ export default function Comfort() {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-            </div>
+            </div> */}
+            <Swiper
+                effect="coverflow"
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView="auto"
+                spaceBetween={100}
+                coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 0.8,
+                    slideShadows: false,
+                }}
+                pagination={{ clickable: true }}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
+            >
+                <SwiperSlide>
+                    <Image className="swipers-foto" src={imgBomi} alt="" priority />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image className="swipers-foto" src={imgBomi2} alt="" priority />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image className="swipers-foto" src={imgBomi3} alt="" priority />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image className="swipers-foto" src={imgBomi} alt="" priority />
+                </SwiperSlide>
+            </Swiper>
+
+
+
 
         </section>
     )

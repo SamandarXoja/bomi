@@ -11,7 +11,7 @@ function Footer() {
     return (
         <footer className="mt-[100px]" id="contacts">
             <div className="container mx-auto px-4">
-              
+
 
                 <div className="flex justify-center footer-socials">
                     <div className="footer-social">

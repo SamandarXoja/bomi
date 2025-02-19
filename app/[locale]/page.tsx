@@ -35,9 +35,9 @@ import cards9 from "@/public/images/cards/project-07-1.jpg";
 
 import registon4 from "@/public/images/reg.jpg";
 
-import moonJar from "@/public/images/jar2.webp"
+import moonJar from "@/public/images/jar2.webp";
 
-
+import bomi from "@/public/images/bomi03.jpg"
 
 
 export default async function HomePage() {
@@ -50,12 +50,12 @@ export default async function HomePage() {
       {/* <Link href='/contact'>{t("contact")}</Link> */}
 
       <div className="">
-        <Image className="w-full" priority src={banner2} objectFit="cover" unoptimized alt="img" />
+        <Image className="w-full h-[100vh]" priority src={banner2} objectFit="cover" unoptimized alt="img" />
       </div>
       <OurProject />
       <section className="pt-[100px]" id="aboutProject">
         <div className="container mx-auto px-4">
-          <h2 className="font-bold text-center text-[28px] text-black mb-6">BOMI FINANCE CENTER  PROJECT</h2>
+          <h2 className="font-bold text-center text-[28px] text-black mb-6">BOMI FINANCE CENTER PROJECT</h2>
           {/* <div className="w-[70px] h-[10px] bg-red-700 mb-6"></div> */}
           <div className="max-w-[1085px] mx-auto w-full">
             <p className="text-[#6F7278] mb-6 text-lg text-center">Наши проекты</p>
@@ -67,9 +67,9 @@ export default async function HomePage() {
           <div className="container mx-auto px-4 flex flex-wrap gap-[1px]">
             <div className="relative group">
               <Image
-                src={cards2}
+                src={bomi}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-[374px] h-[440px] object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -163,7 +163,7 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 items-start container mx-auto px-4">
+        <div className="grid grid-cols-2 gap-6 items-start container mx-auto px-4 ">
           {/* Первый блок (Картинка + Текст) */}
           <div className="relative group w-full h-[500px] overflow-hidden rounded-[30px]">
             <Image
@@ -210,7 +210,7 @@ export default async function HomePage() {
 
       </section>
       <Comfort />
-      <section className="mt-[170px]" id="safety">
+      <section className="mt-[0px]" id="safety">
 
 
         <div className="container mx-auto px-4">

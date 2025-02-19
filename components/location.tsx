@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Headset,  Mail } from "lucide-react";
+import { Globe, Headset, Mail } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
 declare global {
@@ -20,7 +20,7 @@ export default function Location() {
                         center: [41.312531, 69.244106], // Локация
                         zoom: 15, // Уровень увеличения
                     });
-
+                    map.behaviors.disable(["scrollZoom"]);
                     // Создаем метку
                     const placemark = new window.ymaps.Placemark(
                         [41.312531, 69.244106], // Координаты метки
@@ -54,11 +54,13 @@ export default function Location() {
     return (
         <section id="location" className="mapSize ">
 
-            <div className="container flex mx-auto px-4 justify-between">
-                <div className="" style={{ overflow: "hidden", borderRadius: "20px", width: "600px", height: "600px" }}>
-                    <div id="map" style={{ width: "600px", height: "600px", borderRadius: "20px" }} />
+            <div className="container mx-auto px-4 justify-between">
+                <h2 className="text-center text-[#333] font-bold text-[25px] mb-16">СВЯЗАТЬСЯ С НАМИ</h2>
+
+                <div className="" style={{ overflow: "hidden", borderRadius: "20px", width: "100%", height: "600px" }}>
+                    <div id="map" style={{ width: "100%", height: "600px", borderRadius: "20px" }} />
                 </div>
-                <div className="footer-cards">
+                <div className="footer-cards mt-[100px]">
                     <div className="flex flex-col justify-center items-center ">
                         <Headset size={50} color="#000" />
                         <p className="mt-2 mb-2">Телефон</p>

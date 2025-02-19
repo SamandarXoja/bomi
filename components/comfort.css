@@ -1,0 +1,55 @@
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    width: 50%;
+    height: 80%;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 80vh;
+    /* Высота самого слайдера */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swipers-foto {
+    width: 100vw;
+    height: 40vh;
+    /* Делаем картинку 65% от высоты экрана */
+    object-fit: cover;
+    /* Картинка адаптируется */
+    border-radius: 20px;
+    /* Скругляем углы */
+}
+
+/* 
+.swiper-slide:nth-child(2n) {
+    width: 40%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 20%;
+} */
