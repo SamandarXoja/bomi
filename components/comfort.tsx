@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // import { FreeMode, Pagination } from 'swiper/modules';
-import {FreeMode, Pagination } from "swiper/modules";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 
 
 import imgBomi from "@/public/images/comfort-11.jpg"
@@ -106,18 +106,20 @@ export default function Comfort() {
                     slidesPerView={3}
                     spaceBetween={30}
                     freeMode={true}
-                    pagination={{
-                        clickable: true,
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 3000, // ⏳ Задержка в миллисекундах (3 секунды)
+                        disableOnInteraction: false, // ⛔ Не отключать автоплей при взаимодействии
                     }}
-                    modules={[FreeMode, Pagination]}
+                    modules={[FreeMode, Pagination, Autoplay]} // ✅ Добавляем Autoplay
                     className="mySwiper"
                     breakpoints={{
                         320: { slidesPerView: 1, spaceBetween: 10 },
                         480: { slidesPerView: 1, spaceBetween: 10 },
-                        640: { slidesPerView: 1, spaceBetween: 10 }, // Телефон (1 слайд)
-                        768: { slidesPerView: 2, spaceBetween: 20 }, // Планшет (2 слайда)
-                        1024: { slidesPerView: 2, spaceBetween: 30 }, // Десктоп (3 слайда)
-                        1280: { slidesPerView: 3, spaceBetween: 40 }, // Большие экраны (4 слайда)
+                        640: { slidesPerView: 1, spaceBetween: 10 },
+                        768: { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 2, spaceBetween: 30 },
+                        1280: { slidesPerView: 3, spaceBetween: 40 },
                     }}
                 >
                     <SwiperSlide><Image className="swipers-foto" src={imgBomi} alt="" priority /></SwiperSlide>
