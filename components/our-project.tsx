@@ -62,18 +62,18 @@ export default function OurProject() {
 
 
                     {/* Блок с цифрами */}
-                    <div className="bg-[#f8f8f8] rounded-[10px] mt-28 py-[45px] px-9 flex justify-center gap-28 text-center">
-                        <div>
+                    <div className="bg-[#f8f8f8] rounded-[10px] mt-28 py-[45px] px-9 flex flex-wrap 2xl:justify-center xl:justify-center lg:justify-start md:justify-start sm:justify-center xs:justify-center gap-28 text-center">
+                        <div className="">
                             <b className="font-bold text-[35px] text-[#272727]">+37</b>
                             <p className="text-[#272727] text-xl">лет на рынке</p>
                         </div>
 
-                        <div className="border-l border-gray-300  pl-[70px]">
+                        <div className="2xl:border-l xl:border-l lg:border-l-0 md:border-l-0 sm:border-l-0 xs:border-l-0 border-gray-300  2xl:pl-[70px] xl:pl-[70px] lg:pl-[0px] md:pl-[0px] sm:pl-[0px] xs:pl-[0px]">
                             <b className="font-bold text-[35px] text-[#272727]">2 млн м²</b>
                             <p className="text-[#272727] text-xl">недвижимости в продаже</p>
                         </div>
 
-                        <div className="border-l border-gray-300 pl-[70px]">
+                        <div className="2xl:pl-[70px] xl:pl-[70px] lg:pl-[0px] md:pl-[0px] sm:pl-[0px] xs:pl-[0px] 2xl:border-l xl:border-l lg:border-l-0 md:border-l-0 sm:border-l-0 xs:border-l-0 border-gray-300 ">
                             <b className="font-bold text-[35px] text-[#272727]">25</b>
                             <p className="text-[#272727] text-xl">объектов в реализации</p>
                         </div>

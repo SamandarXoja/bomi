@@ -75,6 +75,13 @@ body {
 
 
 
+.container {
+  max-width: 1537px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
 
 .nav {
   z-index: 99;
@@ -158,9 +165,13 @@ body {
 @media (max-width: 1030px) {}
 
 
+
+
+
 .footer-cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 100px;
 }
 
@@ -230,3 +241,15 @@ body {
   border-right: 1px solid #cdcdcd;
   height: 100px;
 } */
+
+
+
+/* grid-template-columns: repeat( 12, minmax(250px, 1fr) ); */
+
+
+.gridss {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
+  grid-auto-rows: 440px;
+  /* Фиксированная высота всех строк */
+}

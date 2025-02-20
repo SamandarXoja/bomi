@@ -50,7 +50,7 @@ export default async function HomePage() {
       {/* <Link href='/contact'>{t("contact")}</Link> */}
 
       <div className="">
-        <Image className="w-full h-[100vh]" priority src={banner2} objectFit="cover" unoptimized alt="img" />
+        <Image className="w-full h-[100vh] object-cover" priority src={banner2} objectFit="cover" unoptimized alt="img" />
       </div>
       <OurProject />
       <section className="pt-[100px]" id="aboutProject">
@@ -64,12 +64,12 @@ export default async function HomePage() {
 
         </div>
         <div className="overflow-hidden mt-14">
-          <div className="container mx-auto px-4 flex flex-wrap gap-[1px]">
+          <div className="container mx-auto px-4  gap-[1px] gridss">
             <div className="relative group">
               <Image
                 src={bomi}
                 alt=""
-                className="w-[374px] h-[440px] object-cover transition-transform "
+                className="w-full h-[440px] object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -78,7 +78,7 @@ export default async function HomePage() {
               <Image
                 src={cards3}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -87,7 +87,7 @@ export default async function HomePage() {
               <Image
                 src={cards4}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -95,7 +95,7 @@ export default async function HomePage() {
               <Image
                 src={cards5}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -103,7 +103,7 @@ export default async function HomePage() {
               <Image
                 src={cards6}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -111,7 +111,7 @@ export default async function HomePage() {
               <Image
                 src={cards7}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -119,7 +119,7 @@ export default async function HomePage() {
               <Image
                 src={cards8}
                 alt=""
-                className="w-[374px] h-[440px] object-cover transition-transform "
+                className="w-full h-[440px] object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -127,7 +127,7 @@ export default async function HomePage() {
               <Image
                 src={cards9}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -135,7 +135,7 @@ export default async function HomePage() {
               <Image
                 src={cards2}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
@@ -143,12 +143,10 @@ export default async function HomePage() {
               <Image
                 src={cards2}
                 alt=""
-                className="w-[374px] min-h-[440px] object-cover transition-transform "
+                className="w-full h-full object-cover transition-transform "
               />
               <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
             </div>
-
-            {/* Повторите для остальных картин */}
           </div>
 
         </div>
@@ -163,18 +161,16 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 items-start container mx-auto px-4 ">
-          {/* Первый блок (Картинка + Текст) */}
-          <div className="relative group w-full h-[500px] overflow-hidden rounded-[30px]">
+        <div className="flex flex-wrap justify-between items-start container mx-auto px-4 gap-y-[30px]">
+          {/* Первый блок */}
+          <div className="relative group 2xl:w-[49%] xl:w-[48%] lg:w-[48%] md:w-[100%] sm:w-[100%] xs:w-[100%] h-[500px] overflow-hidden ">
             <Image
               className="w-full h-full object-cover"
               src={registon4}
               priority
               alt="Registon 4"
             />
-            {/* Затемнение */}
             <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            {/* Текст */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <h3 className="text-[25px] font-medium text-black">Registan</h3>
               <p className="mt-4 text-lg text-[#272727]">
@@ -183,17 +179,15 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Второй блок (Картинка + Текст) */}
-          <div className="relative group w-full h-[500px] overflow-hidden rounded-[30px]">
+          {/* Второй блок */}
+          <div className="relative group 2xl:w-[49%] xl:w-[48%] lg:w-[48%] md:w-[100%] sm:w-[100%] xs:w-[100%]  h-[500px] overflow-hidden ">
             <Image
               className="w-full h-full object-cover"
               src={moonJar}
               priority
               alt="Moon Jar"
             />
-            {/* Затемнение */}
             <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            {/* Текст */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <h3 className="text-[25px] font-medium">Moon Jar</h3>
               <p className="mt-4 text-lg text-[#272727]">
@@ -205,6 +199,7 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
+
 
 
 

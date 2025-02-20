@@ -52,7 +52,7 @@ export default function Location() {
 
 
     return (
-        <section id="location" className="mapSize ">
+        <section id="location" className="mapSize 2xl:mt-0 xl:mt-24 lg:mt-24 md:mt-24 sm:mt-24 xs:mt-24">
 
             <div className="container mx-auto px-4 justify-between">
                 <h2 className="text-center text-[#333] font-bold text-[25px] mb-16">СВЯЗАТЬСЯ С НАМИ</h2>
