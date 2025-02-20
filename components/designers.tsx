@@ -17,7 +17,7 @@ export default function Designers() {
   return (
     <section className="mt-[130px]" >
       <div className="container  mx-auto px-4">
-        <h2 className="text-[30px] font-bold text-center ">Архитектор-дизайнер</h2>
+        <h2 className="text-[30px] font-bold text-center mb-8">Архитектор-дизайнер</h2>
 
         <Swiper
           className="mySwiper h-[600px]  flex"
