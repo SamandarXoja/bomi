@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "@/public/images/logoBomi.png";
+import logo from "@/public/images/logo-5.png";
 import Link from "next/link";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false); // Бургер-меню
@@ -66,37 +66,37 @@ export default function NavBar() {
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className=" text-xl nav__link">О нас</Link></li>
+            }} href="/#" className=" uppercase nav__link text-[13px] font-medium">О нас</Link></li>
 
 
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("aboutProject")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">О проекте</Link></li>
+            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">О проекте</Link></li>
 
 
 
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("concept")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Концепция   </Link></li>
+            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Концепция   </Link></li>
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("comfort")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Комфорт          </Link></li>
+            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Комфорт          </Link></li>
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("safety")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Безопасность
+            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Безопасность
             </Link></li>
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("location")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Локация</Link></li>
+            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Локация</Link></li>
             <li><Link onClick={(e) => {
               e.preventDefault();
               document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-gray-400 text-xl nav__link">Контакты</Link></li>
+            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Контакты</Link></li>
 
             {/* Dropdown меню */}
 
@@ -104,13 +104,13 @@ export default function NavBar() {
 
 
 
-          {/* Бургер-меню для мобильных */}
+
           <button onClick={() => setIsOpen(!isOpen)} className="nav-toggle">
             {isOpen ? <X size={30} color="#000" /> : <Menu size={30} color="#000" />}
           </button>
         </div>
 
-        {/* Выпадающее меню для мобильных устройств */}
+
 
       </nav>
 

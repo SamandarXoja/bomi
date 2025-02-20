@@ -37,7 +37,9 @@ import registon4 from "@/public/images/reg.jpg";
 
 import moonJar from "@/public/images/jar2.webp";
 
-import bomi from "@/public/images/bomi03.jpg"
+import bomi from "@/public/images/bomi03.jpg";
+
+import buildns from "@/public/images/bomi007.jpg"
 
 
 export default async function HomePage() {
@@ -162,43 +164,52 @@ export default async function HomePage() {
         </div>
 
         <div className="flex flex-wrap justify-between items-start container mx-auto px-4 gap-y-[30px]">
-          {/* Первый блок */}
-          <div className="relative group 2xl:w-[49%] xl:w-[48%] lg:w-[48%] md:w-[100%] sm:w-[100%] xs:w-[100%] h-[500px] overflow-hidden ">
-            <Image
-              className="w-full h-full object-cover"
-              src={registon4}
-              priority
-              alt="Registon 4"
-            />
-            <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-[25px] font-medium text-black">Registan</h3>
-              <p className="mt-4 text-lg text-[#272727]">
-                Культурный фестиваль в Самарканде имеет золотую художественную площадь, которая источает ослепительную красоту.
-              </p>
-            </div>
-          </div>
 
-          {/* Второй блок */}
-          <div className="relative group 2xl:w-[49%] xl:w-[48%] lg:w-[48%] md:w-[100%] sm:w-[100%] xs:w-[100%]  h-[500px] overflow-hidden ">
-            <Image
-              className="w-full h-full object-cover"
-              src={moonJar}
-              priority
-              alt="Moon Jar"
-            />
-            <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <h3 className="text-[25px] font-medium">Moon Jar</h3>
-              <p className="mt-4 text-lg text-[#272727]">
-                Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.
-              </p>
-              <p className="mt-6 text-lg text-[#272727]">
-                Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части лунного кувшина и современное серебристое стекло.
-              </p>
+          <div className="2xl:w-[49%] xl:w-[49%] lg:w-[100%] md:w-[100%] sm:w-[100%] xs:w-[100%]">
+            <div className="relative group 2xl:w-[100%] xl:w-[100%] h-[500px] overflow-hidden mb-5">
+              <Image
+                className="w-full h-full object-cover "
+                src={moonJar}
+                priority
+                alt="Moon Jar"
+              />
+              <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <h3 className="text-[25px] font-medium">Moon Jar</h3>
+                <p className="mt-4 text-lg text-[#272727]">
+                  Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.
+                </p>
+                <p className="mt-6 text-lg text-[#272727]">
+                  Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части лунного кувшина и современное серебристое стекло.
+                </p>
+              </div>
             </div>
+
+            <div className="relative group 2xl:w-[100%] xl:w-[100%] h-[500px] overflow-hidden ">
+              <Image
+                className="w-full h-full object-cover"
+                src={registon4}
+                priority
+                alt="Registon 4"
+              />
+              <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <h3 className="text-[25px] font-medium text-black">Registan</h3>
+                <p className="mt-4 text-lg text-[#272727]">
+                  Культурный фестиваль в Самарканде имеет золотую художественную площадь, которая источает ослепительную красоту.
+                </p>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div className="2xl:w-[49%] xl:w-[49%] lg:w-[100%] md:w-[100%] sm:w-[100%] xs:w-[100%]">
+            <Image className="2xl:h-[1020px]" src={buildns} alt="" priority />
           </div>
         </div>
+        <p className="text-center mt-12 text-lg text-[#272727]"> Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части </p>
+        <p className="text-center mt-2 text-lg text-[#272727]">Наша компания использует концепцию Регистана, сочетая величие форм и инновационные материалы для создания открытых и светлых пространств.</p>
 
 
 

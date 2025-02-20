@@ -139,7 +139,7 @@ body {
 
 .nav-list {
   display: flex;
-  gap: 5px;
+  gap: 0px;
 }
 
 .nav-toggle {
