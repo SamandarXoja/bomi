@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 // import banner from "@/public/images/bomi-banner.jpg";
 // import banner1 from "@/public/images/bomi-banner-1.jpg";
-import banner2 from "@/public/images/bomi-main-2.jpg";
+import banner2 from "@/public/images/bg.jpg";
 import OurProject from "@/components/our-project";
 
 // import card1 from "@/public/cards-1/card-1.jpg"
@@ -41,242 +41,43 @@ import bomi from "@/public/images/bomi03.jpg";
 
 import buildns from "@/public/images/bomi007.jpg"
 
+import banner3 from "@/public/images/bg-new.png";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+
 
 export default async function HomePage() {
   const t = await getTranslations("HomePage");
   console.log(t);
 
   return (
-    <div>
+    <div className="relative">
       {/* <h1>{t("title")}</h1> */}
       {/* <Link href='/contact'>{t("contact")}</Link> */}
-
-      <div className="">
-        <Image className="w-full h-[100vh] object-cover" priority src={banner2} objectFit="cover" unoptimized alt="img" />
+      <div className="absolute right-[30px] top-[30px]">
+        <LocaleSwitcher />
       </div>
-      <OurProject />
-      <section className="pt-[100px]" id="aboutProject">
-        <div className="container mx-auto px-4">
-          <h2 className="font-bold text-center text-[28px] text-black mb-6">BOMI FINANCE CENTER PROJECT</h2>
-          {/* <div className="w-[70px] h-[10px] bg-red-700 mb-6"></div> */}
-          <div className="max-w-[1085px] mx-auto w-full">
-            <p className="text-[#6F7278] mb-6 text-lg text-center">Наши проекты</p>
-            {/* <p className="text-[#6F7278] text-lg">Здание расположено прямо на главной улице и имеет преимущество в том, что к нему легко добраться, поскольку оно находится рядом с транспортными средствами (метро, автобус). Кроме того, это место имеет множество географических преимуществ, поскольку поблизости расположены правительственные учреждения и объекты общего обслуживания. </p> */}
-          </div>
 
-        </div>
-        <div className="overflow-hidden mt-14">
-          <div className="container mx-auto px-4  gap-[1px] gridss">
-            <div className="relative group">
-              <Image
-                src={bomi}
-                alt=""
-                className="w-full h-[440px] object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-
-            <div className="relative group">
-              <Image
-                src={cards3}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-
-            <div className="relative group">
-              <Image
-                src={cards4}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards5}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards6}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards7}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards8}
-                alt=""
-                className="w-full h-[440px] object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards9}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards2}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-            <div className="relative group">
-              <Image
-                src={cards2}
-                alt=""
-                className="w-full h-full object-cover transition-transform "
-              />
-              <div className="absolute inset-0 bg-white/0 hover:bg-white/40 transition duration-300 rounded-lg"></div>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section className="" id="concept">
-
-        <div className="mt-[120px] mb-[40px]">
-          <div className="container mx-auto px-4">
-            <h2 className="text-[35px] font-bold">Концепция</h2>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap justify-between items-start container mx-auto px-4 gap-y-[30px]">
-
-          <div className="2xl:w-[49%] xl:w-[49%] lg:w-[100%] md:w-[100%] sm:w-[100%] xs:w-[100%]">
-            <div className="relative group 2xl:w-[100%] xl:w-[100%] h-[500px] overflow-hidden mb-5">
-              <Image
-                className="w-full h-full object-cover "
-                src={moonJar}
-                priority
-                alt="Moon Jar"
-              />
-              <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <h3 className="text-[25px] font-medium">Moon Jar</h3>
-                <p className="mt-4 text-lg text-[#272727]">
-                  Лунная банка — это фарфор мягкого и элегантного чистого белого цвета, который создает красивые формы, меняя тени в зависимости от освещения.
-                </p>
-                <p className="mt-6 text-lg text-[#272727]">
-                  Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части лунного кувшина и современное серебристое стекло.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative group 2xl:w-[100%] xl:w-[100%] h-[500px] overflow-hidden ">
-              <Image
-                className="w-full h-full object-cover"
-                src={registon4}
-                priority
-                alt="Registon 4"
-              />
-              <div className="absolute inset-0 bg-white bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <h3 className="text-[25px] font-medium text-black">Registan</h3>
-                <p className="mt-4 text-lg text-[#272727]">
-                  Культурный фестиваль в Самарканде имеет золотую художественную площадь, которая источает ослепительную красоту.
-                </p>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div className="2xl:w-[49%] xl:w-[49%] lg:w-[100%] md:w-[100%] sm:w-[100%] xs:w-[100%]">
-            <Image className="2xl:h-[1020px]" src={buildns} alt="" priority />
-          </div>
-        </div>
-        <p className="text-center mt-12 text-lg text-[#272727]"> Высотная часть Bomi Finance Center использует чистый и ясный белый цвет внешней части </p>
-        <p className="text-center mt-2 text-lg text-[#272727]">Наша компания использует концепцию Регистана, сочетая величие форм и инновационные материалы для создания открытых и светлых пространств.</p>
+      <div className="z-[-10] banners">
+        <Image
+          className="w-[100vw] h-[100vh] object-cover"
+          priority
+          src={banner2}
+          objectFit="cover"
+          unoptimized
+          alt="img"
+        />
+        <Image
+          className="w-[600px] h-[90vh] min-w-[400px] min-h-[70vh] max-w-[600px] max-h-[90vh] absolute top-[56%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          priority
+          src={banner3}
+          unoptimized
+          alt="img"
+        />
+      </div>
 
 
 
 
-      </section>
-      <Comfort />
-      <section className="mt-[0px]" id="safety">
-
-
-        <div className="container mx-auto px-4">
-          <h2 className="text-[30px] font-bold text-center mb-11">Безопасность</h2>
-          {/* Первый блок: картинка сверху, текст снизу */}
-
-
-          {/* Второй блок: текст сверху, картинка снизу */}
-          <div className="mb-[80px] flex flex-col items-center gap-4">
-            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
-              <Image
-                className="rounded-xl shadow-md"
-                src={safe}
-                width={500}
-                height={400}
-                alt="safe"
-              />
-            </div>
-            <div className="max-w-[500px] text-center">
-              <h3 className="text-3xl font-semibold text-[#000]">СИСТЕМА СЕЙСМОСТОЙКОСТИ</h3>
-              <p className="mt-5 text-[#272727] leading-relaxed text-lg">
-                Сейсмическая конструкция имеет рейтинг 9, что обеспечивает высокий уровень устойчивости к стихийным бедствиям.
-              </p>
-              <p className="text-[#272727] leading-relaxed text-lg mt-2">
-                Это гарантия безопасности людей и сохранности имущества в случае землетрясения.
-              </p>
-              {/* <p className="text-[#272727] mt-5 leading-relaxed text-lg">
-                Сейсмостойкость — это не только требование безопасности, но и залог вашего комфорта и уверенности в защите вашего бизнеса.
-              </p> */}
-            </div>
-
-          </div>
-          <div className="mb-[80px] flex flex-col items-center gap-4">
-            <div className="w-full max-w-[500px] transform transition duration-500 hover:scale-105">
-              <Image
-                className="rounded-xl shadow-md"
-                src={persons}
-                // width={500}
-                // height={400}
-                alt="persons"
-                unoptimized
-              />
-            </div>
-            <div className="max-w-[500px] text-center">
-              <h3 className="text-3xl font-semibold text-[#000]">Проектирование структуры</h3>
-              <b className="block mt-5 text-lg text-[#272727]">Хакимов Шамил Абдуллаевич</b>
-              <p className="text-[#4A5568]">(В настоящее время)</p>
-              <p className="mt-5  leading-relaxed text-[#272727] text-lg">
-                Доктор, академик Международной инженерной академии, международный эксперт по защите строительных конструкций от землетрясений и горных опасностей
-              </p>
-              <p className="text-[#272727] text-lg mt-2">(сертификат специалиста № 104) Вице-президент.</p>
-            </div>
-          </div>
-        </div>
-
-
-
-      </section>
-      <Designers />
-      <Location />
 
     </div>
   );

@@ -6,7 +6,19 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/images/logo-5.png";
 import Link from "next/link";
+
+
+
+import Box from '@mui/material/Box';
+import { SimpleTreeView } from '@mui/x-tree-view';
+import { TreeItem } from '@mui/x-tree-view/TreeItem';
+import { useParams } from "next/navigation";
+
+
+
 export default function NavBar() {
+  const { locale } = useParams()
+
   const [isOpen, setIsOpen] = useState(false); // Бургер-меню
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown
   // const [position, setPosition] = React.useState("ru");
@@ -42,65 +54,85 @@ export default function NavBar() {
   }, []);
 
 
+  // const menuItems = [
+  //   { title: "bomi", submenu: ["Подпункт 1", "Подпункт 2"] },
+  //   { title: "О проекте", submenu: ["Цели", "Документы"] },
+  //   { title: "Концепция", submenu: ["Идея", "План"] },
+  //   { title: "Комфорт", submenu: ["Удобства", "Транспорт"] },
+  //   { title: "Безопасность", submenu: ["Охрана", "Технологии"] },
+  //   { title: "Локация", submenu: ["Карта", "Доступность"] },
+  //   { title: "Контакты", submenu: ["Телефон", "Email"] },
+  // ];
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const toggleDropdown = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const menuItems = [
+    { title: "BOMI", submenu: ["ABOUT RIEUL", "CONTACT"], src: "/about" },
+    { title: "LOOK BOOK", submenu: ["ABOUT RIEUL", "CONTACT"] },
+    { title: "CAMPAIGN", submenu: ["ABOUT RIEUL", "CONTACT"] },
+    { title: "EVENT", submenu: ["ABOUT RIEUL", "CONTACT"] },
+    { title: "SHOP", submenu: ["ABOUT RIEUL", "CONTACT"] },
+    { title: "NEWS", submenu: ["ABOUT RIEUL", "CONTACT"] },
+    { title: "SPONSOR SHIP", submenu: ["ABOUT RIEUL", "CONTACT"] },
+  ];
   return (
-    <>
-      <div className="absolute  right-[100px]">
-        <LocaleSwitcher />
-      </div>
+    <div className="">
 
 
 
-      <nav className={`text-black block nav ${scrolled ? "scrolled" : ""}`}>
+      
+
+
+      <nav className={`text-black block nav`}>
 
         <div className="">
           {/* Логотип */}
-          <div className="nav-logo">
+          <Link href={`/`} className="nav-logo block">
 
             <Image className="w-[130px]" src={logo} width={200} height={200} alt="logo" />
 
-          </div>
+          </Link>
 
-          {/* Меню для больших экранов */}
-          <ul className="flex flex-col nav-list mb-5">
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className=" uppercase nav__link text-[13px] font-medium">О нас</Link></li>
-
-
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("aboutProject")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">О проекте</Link></li>
-
-
-
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("concept")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Концепция   </Link></li>
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("comfort")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Комфорт          </Link></li>
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("safety")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Безопасность
-            </Link></li>
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("location")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Локация</Link></li>
-            <li><Link onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
-            }} href="/#" className="hover:text-red-600 uppercase nav__link text-[13px] font-medium">Контакты</Link></li>
-
-            {/* Dropdown меню */}
-
+          <ul className="flex flex-col space-y-2 text-black text-[12px] font-medium trees">
+            {menuItems.map((item, index) => (
+              <li key={index} className="navs">
+                {item.submenu ? (
+                  <>
+                    <button
+                      onClick={() => toggleDropdown(index)}
+                      className="uppercase w-full text-left"
+                    >
+                      {item.title}
+                    </button>
+                    <ul
+                      className={`mt-0 space-y-1 text-[#666] text-[11px]  nav-submenu ${openIndex === index ? "open" : ""
+                        }`}
+                    >
+                      <div className="mt-[10px]">
+                        {item.submenu.map((subItem, subIndex) => (
+                          <li key={subIndex} className="ml-4 mt-1">
+                            <Link href={`/${locale}${item.src}`}>{subItem}</Link>
+                          </li>
+                        ))}
+                      </div>
+                    </ul>
+                  </>
+                ) : (
+                  <Link href="/#" className="uppercase block">
+                    {item.title}
+                  </Link>
+                )}
+              </li>
+            ))}
           </ul>
+
+
+
+
+
 
 
 
@@ -114,6 +146,6 @@ export default function NavBar() {
 
       </nav>
 
-    </>
+    </div>
   );
 }

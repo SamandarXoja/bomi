@@ -7,25 +7,16 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import Footer from "@/components/footer";
-import { Open_Sans } from "next/font/google";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+import { Lato, Open_Sans, Nanum_Gothic } from "next/font/google";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 
-const openSans = Open_Sans({
-  subsets: ["latin", "cyrillic"], // Поддержка кириллицы
-  variable: "--font-open-sans", // CSS переменная
-  weight: ["300", "400", "600", "700"], // Доступные веса
-});
+
+
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" });
+const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-open-sans" });
+const nanumGothic = Nanum_Gothic({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-nanum-gothic" });
 
 
 
@@ -49,14 +40,15 @@ export default async function RootLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable}`}>
       <body
-        className={`${openSans.variable} antialiased`}
+        className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+        
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>

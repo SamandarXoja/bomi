@@ -1,0 +1,113 @@
+import React from 'react';
+
+import aboutImg from "@/public/images/comfort-10.jpg"
+import Image from 'next/image';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
+import logo from "@/public/images/logo-04.jpg"
+
+const About = () => {
+  return (
+    <div className='relative'>
+      <div className="absolute right-[30px] top-[-100px]">
+        <LocaleSwitcher />
+      </div>
+
+
+      <section className="mt-[140px]">
+        <div className="mx-auto  container bg-black  min-h-[1300px] relative">
+
+          {/* Заголовок BOMI, теперь с z-индексом выше фона */}
+          <h2 className="text-[#fff] text-6xl absolute about-title top-[150px] left-[43%] z-10 uppercase">BOMI</h2>
+
+          <div className="flex justify-between">
+            <div className='ml-36  h-[100vh] flex flex-col justify-center'>
+              <h3 className="about__title-sub uppercase text-[70px] text-[#c0c0c0] relative z-20 leading-[50px]">Officia </h3>
+              <p className="uppercase text-[70px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>ipsum</span> LOREM</p>
+              <div className='max-w-[500px] mt-6'>
+                <p className='text-white text-3xl'>Lorem ipsum, dolor sit amet </p>
+                <p className='text-white text-3xl'>adipisicing elit. Praesentium,</p>
+              </div>
+            </div>
+
+
+
+            {/* Картинка, помещаем ее в относительный контейнер */}
+            <div className=" right-0 top-0 z-0">
+              <Image className="w-[700px] h-[1000px] object-cover" src={aboutImg} priority alt="" />
+            </div>
+          </div>
+
+          <div className='flex justify-center mt-[30px]'>
+            <Image src={logo} className='w-[80px] h-[80px]' width={100} height={100} alt="" />
+          </div>
+
+
+        </div>
+
+
+        <div className='mx-auto container  bg-[#131313] min-h-[1400px] pt-[180px]'>
+          <div className='text-center'>
+            <h3 className='text-[#fff] text-[60px] text-center'>Lorem, dolor.</h3>
+            <p className='text-[#fff] text-[40px] text-center mb-[24px] mt-[24px]'>   Lorem ipsum dolor sit amet adipisicing.</p>
+            <p className='text-[#fff] text-[30px] text-center'>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+
+          <div className='flex'>
+            <div>
+              <span>LOGO</span>
+              <p>Lorem, ipsum</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+
+
+          </div>
+
+
+          <div className="flex justify-center gap-[100px] relative mr-[65px]">
+            {/* Первый блок */}
+            <div className="flex  flex-col items-center justify-around ">
+              <Image src={logo} className="w-[80px] h-[80px]" width={100} height={100} alt="" />
+              <div className="text-center">
+                <p className="text-[#c0c0c0] text-[40px] leading-[120%]">Lorem, ipsum.</p>
+                <p className="text-[#c0c0c0] text-[40px] leading-[60%] text-center mt-2">
+                  <span className="text-white">Lorem suit, </span>ipsum.
+                </p>
+              </div>
+            </div>
+
+
+            <div className="relative w-[1px] bg-white h-[800px] mx-10"></div>
+
+
+            <div className="flex flex-col items-center justify-around ">
+              {/* <Image src={logo} className="w-[80px] h-[80px] mt-[10px]" width={100} height={100} alt="" /> */}
+              <h3 className='text-[#fff] text-[60px] textbomi'>BOMI</h3>
+              <div>
+                <p className="text-white text-[40px]">Lorem, ipsum.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div className='flex justify-around mt-[200px]'>
+            <div className='w-[500px] h-[700px] border border-white rounded-[30px]'></div>
+            <div className='w-[500px] h-[700px] border border-white rounded-[30px]'></div>
+
+            
+          </div>
+
+
+
+
+        </div>
+
+
+
+      </section>
+
+    </div>
+  )
+
+}
+export default About;

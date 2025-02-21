@@ -7,7 +7,7 @@ export default function LocaleSwitcher() {
   const locale = useLocale();
 
   return (
-    <div className='flex items-center gap-2 mt-[60px] pl-4 bg-white rounded-2xl'>
+    <div className='flex w-[120px] right-0 items-center gap-2 pl-4 border border-[#000] rounded-2xl'>
       <Globe className='h-4 w-4 text-muted-foreground' />
       <LocaleSwitcherSelect defaultValue={locale} label='Select a locale'>
         {routing.locales.map((cur) => (

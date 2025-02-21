@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-lato), var(--font-open-sans), var(--font-nanum-gothic), 'Malgun Gothic', Arial, Dotum, sans-serif;
 }
 
 @layer base {
@@ -76,7 +76,7 @@ body {
 
 
 .container {
-  max-width: 1537px;
+  max-width: 1412px;
   width: 100%;
   margin: 0 auto;
 }
@@ -85,28 +85,30 @@ body {
 
 .nav {
   z-index: 99;
-  min-height: 79px;
+  /* min-height: 79px; */
   display: flex;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   /* Фиксируем наверху */
-  top: 60px;
+  top: 30px;
   /* Отступ сверху */
-  left: 2.4%;
+  left: 70px;
   transform: translateX(-20%);
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  /* background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); */
   padding: 20px;
   border-radius: 20px;
-  transition: background-color 0.3s ease-in-out, top 0.3s ease-in-out;
-  width: 180px;
+  position: fixed;
+  /* width: 180px; */
+
 }
 
 /* Когда скроллим — делаем nav менее прозрачным */
 .nav.scrolled {
   background-color: rgba(255, 255, 255, 0.9);
-  top: 0;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* top: 40px; */
+  position: fixed;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 }
 
 
@@ -116,18 +118,24 @@ body {
 
 
 .nav-logo {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 
 .nav__link {
-  color: #000000;
+  color: #222;
+  letter-spacing: 0.04em;
   transition: 0.3s;
+  font-weight: 400 !important;
+  -webkit-text-stroke: 0.3px #222;
+  line-height: 11px;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.nav__link:hover {
-  color: #A52A2A;
-}
+
 
 
 /* .nav.scrolled {
@@ -140,6 +148,8 @@ body {
 .nav-list {
   display: flex;
   gap: 0px;
+  margin-left: 10px;
+  margin-top: 15px;
 }
 
 .nav-toggle {
@@ -159,6 +169,30 @@ body {
   border: 1px solid #707070;
 }
 
+
+
+
+
+/* Добавляем в ваш CSS */
+.nav-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.nav-submenu.open {
+  max-height: 70px;
+  /* Увеличьте это значение, если подменю большое */
+}
+
+.trees {
+  margin-left: 13px;
+}
+
+.navs {
+  line-height: 13px;
+  -webkit-text-stroke: 0.1px #222;
+}
 
 
 
@@ -252,4 +286,31 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(374px, 1fr));
   grid-auto-rows: 440px;
   /* Фиксированная высота всех строк */
+}
+
+
+.banners {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+.about-title {
+  -webkit-text-stroke: 2px #fff;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+.about__title-sub1 {
+  -webkit-text-stroke: 2px #fff;
+}
+
+
+
+
+.textbomi{
+  -webkit-text-stroke: 2px #fff; 
 }

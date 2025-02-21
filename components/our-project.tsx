@@ -19,6 +19,7 @@ import "swiper/css";
 
 // import about from "@/public/images/imgt.jpg"
 import about1 from "@/public/images/bomi-banner-1.jpg"
+import Link from "next/link";
 // import { Building, Handshake, Lightbulb, ShieldCheck } from "lucide-react";
 
 
@@ -109,6 +110,16 @@ export default function OurProject() {
                                 <h4 className="font-bold text-xl text-[#000]">1997</h4>
                                 <p className="text-[#272727] text-lg">Переезд головного офиса (661, Дынччо-дон, Кансо-ку, Сеул)</p>
                             </div>
+                            import Link from "next/link";
+
+
+
+                        </div>
+
+                        <div className="ml-[25px] mt-7">
+                            <Link className="text-lg block border max-w-[120px] text-center " href="http://www.bomienc.com/introduce/history/?ckattempt=1" target="_blank" rel="noopener noreferrer">
+                                Читать ещё
+                            </Link>
                         </div>
                     </div>
 
@@ -116,7 +127,12 @@ export default function OurProject() {
                 </div>
             </div>
             {/* Блок с ценностями */}
-
+            <div className="mx-auto max-w-[1505px] w-full">
+                <video width="1505" controls>
+                    <source src="/video/about.mp4" type="video/mp4" />
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
 
 
         </section>
