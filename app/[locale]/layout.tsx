@@ -3,15 +3,31 @@ import { Locale, routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+// import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "./globals.css";
 // import Footer from "@/components/footer";
+import { Open_Sans } from "next/font/google";
 
-import { Lato, Open_Sans, Nanum_Gothic } from "next/font/google";
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" });
-const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-open-sans" });
-const nanumGothic = Nanum_Gothic({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-nanum-gothic" });
+
+const openSans = Open_Sans({
+  subsets: ["latin", "cyrillic"], // Поддержка кириллицы
+  variable: "--font-open-sans", // CSS переменная
+  weight: ["300", "400", "600", "700"], // Доступные веса
+});
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,21 +37,22 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-  params: { locale: Locale } | Promise<{ locale: Locale }>; // Теперь params это либо объект, либо промис
-}) {
-  const { locale } = await params;  // Делаем await для params, чтобы получить его значения
-  if (!routing.locales.includes(locale)) {
+  params: { locale: Locale };
+}>) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
-
-  // Получаем сообщения для языка
+  // Providing all messages to the client
+  // side is the easiest way to get started
   const messages = await getMessages();
-
   return (
-    <html lang={locale} className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable}`}>
-      <body className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable} antialiased`}>
+    <html lang={locale}>
+      <body
+        className={`${openSans.variable} antialiased`}
+      >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
