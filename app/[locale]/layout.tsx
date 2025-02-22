@@ -3,22 +3,15 @@ import { Locale, routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-// import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import Footer from "@/components/footer";
 
 import { Lato, Open_Sans, Nanum_Gothic } from "next/font/google";
 
-
-
-
-
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" });
 const openSans = Open_Sans({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-open-sans" });
 const nanumGothic = Nanum_Gothic({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-nanum-gothic" });
-
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,27 +21,25 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: { locale: Locale };
-}>) {
-  const { locale } = await params;
-  if (!routing.locales.includes(locale as Locale)) {
+  params: { locale: Locale }; // Убедись, что тут правильно типизирован параметр
+}) {
+  const { locale } = params;  // Прямо получаем locale из params
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  
+  // Получаем сообщения для языка
   const messages = await getMessages();
+
   return (
     <html lang={locale} className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable}`}>
-      <body
-        className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable} antialiased`}
-      >
+      <body className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </NextIntlClientProvider>
       </body>
     </html>
