@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import LocaleSwitcher from "./LocaleSwitcher";
+
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/images/logo-5.png";
@@ -9,9 +9,7 @@ import Link from "next/link";
 
 
 
-import Box from '@mui/material/Box';
-import { SimpleTreeView } from '@mui/x-tree-view';
-import { TreeItem } from '@mui/x-tree-view/TreeItem';
+
 import { useParams } from "next/navigation";
 
 
@@ -71,19 +69,18 @@ export default function NavBar() {
 
   const menuItems = [
     { title: "BOMI", submenu: ["ABOUT RIEUL", "CONTACT"], src: "/about" },
-    { title: "LOOK BOOK", submenu: ["ABOUT RIEUL", "CONTACT"] },
-    { title: "CAMPAIGN", submenu: ["ABOUT RIEUL", "CONTACT"] },
-    { title: "EVENT", submenu: ["ABOUT RIEUL", "CONTACT"] },
-    { title: "SHOP", submenu: ["ABOUT RIEUL", "CONTACT"] },
-    { title: "NEWS", submenu: ["ABOUT RIEUL", "CONTACT"] },
-    { title: "SPONSOR SHIP", submenu: ["ABOUT RIEUL", "CONTACT"] },
+    { title: "PROJECT", submenu: ["PROJECT",] },
+    { title: "CONCEPT", submenu: ["CONCEPT"] },
+    { title: "COMFORT", submenu: ["COMFORT"] },
+    { title: "SAFETY", submenu: ["SAFETY"] },
+
   ];
   return (
     <div className="">
 
 
 
-      
+
 
 
       <nav className={`text-black block nav`}>
@@ -108,15 +105,27 @@ export default function NavBar() {
                       {item.title}
                     </button>
                     <ul
-                      className={`mt-0 space-y-1 text-[#666] text-[11px]  nav-submenu ${openIndex === index ? "open" : ""
+                      className={`mt-0 space-y-1 text-[#666] text-[11px] nav-submenu ${openIndex === index ? "open" : ""
                         }`}
                     >
                       <div className="mt-[10px]">
-                        {item.submenu.map((subItem, subIndex) => (
-                          <li key={subIndex} className="ml-4 mt-1">
-                            <Link href={`/${locale}${item.src}`}>{subItem}</Link>
-                          </li>
-                        ))}
+                        {item.submenu.map((subItem, subIndex) => {
+                          // Определяем путь для "CONTACT" и "PROJECT"
+                          let href = `/${locale}${item.src || ""}`;
+                          if (subItem === "CONTACT") href = `/${locale}/contact`;
+                          if (subItem === "PROJECT") href = `/${locale}/project`;
+                          if (subItem === "CONCEPT") href = `/${locale}/concept`;
+                          if (subItem === "COMFORT") href = `/${locale}/comfort`;
+                          if (subItem === "SAFETY") href = `/${locale}/safety`;
+
+
+
+                          return (
+                            <li key={subIndex} className="ml-4 mt-1">
+                              <Link href={href}>{subItem}</Link>
+                            </li>
+                          );
+                        })}
                       </div>
                     </ul>
                   </>
@@ -128,14 +137,6 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
-
-
-
-
-
-
-
-
 
           <button onClick={() => setIsOpen(!isOpen)} className="nav-toggle">
             {isOpen ? <X size={30} color="#000" /> : <Menu size={30} color="#000" />}

@@ -9,7 +9,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 
 import { Lato, Open_Sans, Nanum_Gothic } from "next/font/google";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
+
 
 
 
@@ -45,10 +45,10 @@ export default async function RootLayout({
         className={`${lato.variable} ${openSans.variable} ${nanumGothic.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-        
+
           <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -311,6 +311,47 @@ body {
 
 
 
-.textbomi{
-  -webkit-text-stroke: 2px #fff; 
+.textbomi {
+  -webkit-text-stroke: 2px #fff;
+}
+
+
+
+.titlees1 {
+  -webkit-text-stroke: 2px #c0c0c0;
+}
+
+.titlees {
+  -webkit-text-stroke: 2px #fff;
+}
+
+.contact-us-title {
+  letter-spacing: 3px;
+}
+
+
+.project-title {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.concept-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 70px;
+}
+
+.comfort-title{
+  color: #333;
+  letter-spacing: 3px;
+}
+
+
+.text-safety{
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 70px;
+  font-weight: 600;
 }

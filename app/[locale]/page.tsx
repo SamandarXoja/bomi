@@ -4,7 +4,7 @@ import Image from "next/image";
 // import banner from "@/public/images/bomi-banner.jpg";
 // import banner1 from "@/public/images/bomi-banner-1.jpg";
 import banner2 from "@/public/images/bg.jpg";
-import OurProject from "@/components/our-project";
+
 
 // import card1 from "@/public/cards-1/card-1.jpg"
 // import card2 from "@/public/cards-1/card2.jpg"
@@ -12,34 +12,7 @@ import OurProject from "@/components/our-project";
 
 // import imgResiton from "@/public/images/registon.jpg"
 
-// import imgResiton3 from "@/public/images/vase2.jpg"
-import Comfort from "@/components/comfort";
 
-
-import persons from "@/public/images/Hakimov.jpg";
-import safe from "@/public/images/safe.jpg"
-import Designers from "@/components/designers";
-import Location from "@/components/location";
-
-import cards2 from "@/public/images/cards.jpg";
-
-import cards3 from "@/public/images/cards/cards03.jpg"
-import cards4 from "@/public/images/cards/img_9738-1.jpg"
-
-import cards5 from "@/public/images/cards/project-02.jpg";
-import cards6 from "@/public/images/cards/project-08-1-2.jpg";
-import cards7 from "@/public/images/cards/project-05.jpg";
-import cards8 from "@/public/images/cards/2-20.jpg";
-
-import cards9 from "@/public/images/cards/project-07-1.jpg";
-
-import registon4 from "@/public/images/reg.jpg";
-
-import moonJar from "@/public/images/jar2.webp";
-
-import bomi from "@/public/images/bomi03.jpg";
-
-import buildns from "@/public/images/bomi007.jpg"
 
 import banner3 from "@/public/images/bg-new.png";
 import LocaleSwitcher from "@/components/LocaleSwitcher";

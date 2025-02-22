@@ -5,6 +5,7 @@ import Image from 'next/image';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import logo from "@/public/images/logo-04.jpg"
 
+
 const About = () => {
   return (
     <div className='relative'>
@@ -37,7 +38,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className='flex justify-center mt-[30px]'>
+          <div className='flex justify-center mt-[80px]'>
             <Image src={logo} className='w-[80px] h-[80px]' width={100} height={100} alt="" />
           </div>
 
@@ -45,7 +46,7 @@ const About = () => {
         </div>
 
 
-        <div className='mx-auto container  bg-[#131313] min-h-[1400px] pt-[180px]'>
+        <div className='mx-auto container  bg-[#131313] min-h-[1700px] pt-[180px] pb-[70px]'>
           <div className='text-center'>
             <h3 className='text-[#fff] text-[60px] text-center'>Lorem, dolor.</h3>
             <p className='text-[#fff] text-[40px] text-center mb-[24px] mt-[24px]'>   Lorem ipsum dolor sit amet adipisicing.</p>
@@ -90,19 +91,54 @@ const About = () => {
           </div>
 
 
-          <div className='flex justify-around mt-[200px]'>
-            <div className='w-[500px] h-[700px] border border-white rounded-[30px]'></div>
-            <div className='w-[500px] h-[700px] border border-white rounded-[30px]'></div>
+          <div className='flex justify-evenly mt-[200px] '>
+            <div className='w-[460px] h-[700px] border border-white rounded-[30px] gap-[50px] flex flex-col items-center justify-center'>
+              <div className='flex justify-center items-center flex-col'>
+                <div className='w-[100px] h-[100px] border border-white rounded-sm'></div>
+                <div className='mt-10 mb-10'>
+                  <p className='text-white text-3xl'>Lorem, ipsum.</p>
+                  <p className='text-white text-3xl'>Lorem, ipsum.</p>
+                </div>
+              </div>
 
-            
+              <div className='flex justify-center items-center flex-col mt-4'>
+                <Image className='w-[100px] h-[100px] block mb-10' src={logo} alt='' priority />
+                <p className='text-white text-3xl'>Lorem, ipsum.</p>
+                <p className='text-white text-3xl'>Lorem, ipsum dolor.</p>
+              </div>
+
+            </div>
+
+
+
+            <div className='w-[460px] h-[700px] border border-white rounded-[30px] flex flex-col items-center justify-center gap-[120px]'>
+              <div className='mt-[70px]'>
+                <h3 className='uppercase text-white text-[70px] titlees'>bomi</h3>
+                <p className='uppercase text-[#c0c0c0] text-[70px] titlees1 leading-[150%]'>bomi</p>
+              </div>
+
+              <div className='flex flex-col items-center justify-center'>
+                <p className='text-white text-[30px] leading-[120%]'>Lorem, ipsum. sit</p>
+                <p className='text-white  text-[30px] leading-[105%]'>Lorem. sut</p>
+                <p className='text-white  text-[30px] leading-[120%]'>Lorem, ipsum dolor. sit amet.</p>
+
+              </div>
+
+
+            </div>
+
+
           </div>
+
+
+          <div className=' mx-auto max-w-[1300px] h-[2px] bg-[#c0c0c0] mt-[350px]'></div>
+          <p className='text-[#ebebeb] text-center mt-9'>Lorem ipsum dolor sit amet consectetur.</p>
 
 
 
 
         </div>
-
-
+      
 
       </section>
 

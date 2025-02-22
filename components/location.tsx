@@ -1,88 +1,37 @@
 "use client";
 
-import { Globe, Headset, Mail } from "lucide-react";
-import Link from "next/link";
-import { useEffect } from "react";
-declare global {
-    interface Window {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ymaps?: any;
-    }
-}
+
+
 
 export default function Location() {
 
-    useEffect(() => {
-        const loadMap = () => {
-            if (typeof window !== "undefined" && window.ymaps) {
-                window.ymaps.ready(() => {
-                    const map = new window.ymaps.Map("map", {
-                        center: [41.312531, 69.244106], // Локация
-                        zoom: 15, // Уровень увеличения
-                    });
-                    map.behaviors.disable(["scrollZoom"]);
-                    // Создаем метку
-                    const placemark = new window.ymaps.Placemark(
-                        [41.312531, 69.244106], // Координаты метки
-                        {
-                            hintContent: "Моя локация", // Подсказка при наведении
-                            balloonContent: "Здесь находится нужное место", // Балун при клике
-                        },
-                        {
-                            preset: "islands#redDotIcon", // Стиль метки (можно изменить)
-                        }
-                    );
-
-                    map.geoObjects.add(placemark); // Добавляем метку на карту
-                });
-            }
-        };
-
-        if (typeof window !== "undefined" && !window.ymaps) {
-            const script = document.createElement("script");
-            script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
-            script.async = true;
-            script.onload = loadMap;
-            document.body.appendChild(script);
-        } else {
-            loadMap();
-        }
-    }, []);
 
 
 
     return (
         <section id="location" className="mapSize 2xl:mt-0 xl:mt-24 lg:mt-24 md:mt-24 sm:mt-24 xs:mt-24">
+            <div className="mx-auto flex flex-col justify-center items-center">
+                <h2 className="mt-[60px] mb-[60px] text-[20px]">CONTACT US</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.8160276599774!2d69.24457973874087!3d41.3128656695428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0903649207%3A0x14a40c03c24ff696!2z0KPQt9Cx0LXQutC40YHRgtCw0L0g0L_RgNC-0YHQv9C10LrRgiA5Mywg0KLQsNGI0LrQtdC90YIsIFRhc2hrZW50LCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1740216607860!5m2!1sru!2s"
+                    width="70%"
+                    height="350"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                />
 
-            <div className="container mx-auto px-4 justify-between">
-                <h2 className="text-center text-[#333] font-bold text-[25px] mb-16">СВЯЗАТЬСЯ С НАМИ</h2>
-
-                <div className="" style={{ overflow: "hidden", borderRadius: "20px", width: "100%", height: "600px" }}>
-                    <div id="map" style={{ width: "100%", height: "600px", borderRadius: "20px" }} />
-                </div>
-                <div className="footer-cards mt-[100px]">
-                    <div className="flex flex-col justify-center items-center ">
-                        <Headset size={50} color="#000" />
-                        <p className="mt-2 mb-2">Телефон</p>
-                        <Link href="tel:+998772996000">+998 77 299 60 00</Link>
-                    </div>
-
-                    <div className="flex flex-col justify-center items-center">
-                        <Globe size={50} color="#000" />
-                        <p className="mt-2 mb-2">АДРЕС</p>
-                        <p>Г.Ташкент.Шайхантахурский район</p>
-                    </div>
-
-
-                    <div className="flex flex-col justify-center items-center">
-                        <Mail size={50} color="#000" />
-                        <p className="mt-2 mb-2">EMAIL</p>
-                        <Link href="mailto:info@Bomi.uz">info@Bomi.uz</Link>
-
-                    </div>
-                </div>
+            </div>
+            <div className="text-center">
+                <h3 className="mt-[55px] text-[24px] mb-[50px]">Lorem, ipsum.</h3>
+                <p className="font-bold">Reservation Only</p>
+                <p className="mt-[20px] mb-[20px]">Adress: Toshkent City Islom Karimov kochasi</p>
+                <p>Customer Service Info:</p>
+                <p className="mb-[160px]">Lorem, ipsum.</p>
             </div>
 
+
+
         </section>
-    )
+    );
 }

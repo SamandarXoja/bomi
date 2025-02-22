@@ -1,11 +1,15 @@
-import { ContactForm } from "@/components/ContactForm";
-import Link from "next/link";
-export default async function ContactPage() {
+
+
+
+import Location from "@/components/location";
+
+export default async function Contact() {
   return (
     <div>
-      <h1>Contact</h1>
-      <Link href='/'>Home</Link>
-      <ContactForm />
+      {/* <h1>CONTACT US</h1> */}
+      {/* <Link href='/'>Home</Link> */}
+      <Location />
+
     </div>
   );
 }
