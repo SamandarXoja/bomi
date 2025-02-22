@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "./globals.css";
-import Footer from "@/components/footer";
+// import Footer from "@/components/footer";
 
 import { Lato, Open_Sans, Nanum_Gothic } from "next/font/google";
 
@@ -23,13 +23,13 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: Locale }; // Убедись, что тут правильно типизирован параметр
+  params: { locale: Locale } | Promise<{ locale: Locale }>; // Теперь params это либо объект, либо промис
 }) {
-  const { locale } = params;  // Прямо получаем locale из params
+  const { locale } = await params;  // Делаем await для params, чтобы получить его значения
   if (!routing.locales.includes(locale)) {
     notFound();
   }
-  
+
   // Получаем сообщения для языка
   const messages = await getMessages();
 
