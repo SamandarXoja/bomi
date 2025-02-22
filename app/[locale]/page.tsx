@@ -15,6 +15,7 @@ import banner2 from "@/public/images/bg.jpg";
 
 
 import banner3 from "@/public/images/bg-new.png";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 // import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 
@@ -26,9 +27,9 @@ export default async function HomePage() {
     <div className="relative">
       {/* <h1>{t("title")}</h1> */}
       {/* <Link href='/contact'>{t("contact")}</Link> */}
-      {/* <div className="absolute right-[30px] top-[30px]">
+      <div className="absolute right-[30px] top-[30px]">
         <LocaleSwitcher />
-      </div> */}
+      </div>
 
       <div className="z-[-10] banners">
         <Image
