@@ -24,7 +24,7 @@ import foto16 from "@/public/card-buildings/project-04-1-thumbnail.jpg";
 function Project() {
 
 
-    let images = [
+    const images = [
         foto8,
         foto1,
         foto,
@@ -65,20 +65,7 @@ function Project() {
                         <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
                     </div>
                 ))}
-
-
-
-
-
-
-
-
-
-
             </div>
-
-
-
 
         </section>
     )

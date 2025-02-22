@@ -49,7 +49,7 @@ const About = () => {
         <div className='mx-auto container  bg-[#131313] min-h-[1700px] pt-[180px] pb-[70px]'>
           <div className='text-center'>
             <h3 className='text-[#fff] text-[60px] text-center'>Lorem, dolor.</h3>
-            <p className='text-[#fff] text-[40px] text-center mb-[24px] mt-[24px]'>   Lorem ipsum dolor sit amet adipisicing.</p>
+            <p className='text-[#fff] text-[40px] text-center mb-[24px] mt-[24px]'>Lorem ipsum dolor sit amet adipisicing.</p>
             <p className='text-[#fff] text-[30px] text-center'>Lorem ipsum dolor sit amet.</p>
           </div>
 

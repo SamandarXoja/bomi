@@ -1,9 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation"; // Импортируем usePathname
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
-import telegram from "@/public/images/telegram3.svg";
-import Image from "next/image";
+// import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+// import telegram from "@/public/images/telegram3.svg";
+// import Image from "next/image";
 import Link from "next/link";
 
 function Footer() {

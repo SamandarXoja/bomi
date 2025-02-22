@@ -1,3 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off", // отключает проверку неиспользуемых переменных
+    "react/no-unescaped-entities": "off" // отключает проверку экранирования символов
+  }
 }

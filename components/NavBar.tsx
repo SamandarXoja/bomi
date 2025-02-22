@@ -24,7 +24,8 @@ export default function NavBar() {
 
   console.log(isDropdownOpen);
   // console.log(position);
-
+ console.log(scrolled);
+ 
 
 
   useEffect(() => {
