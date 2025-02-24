@@ -20,11 +20,12 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: { locale: Locale } | Promise<{ locale: Locale }>;
 }
 
 export default async function RootLayout({ children, params }: RootLayoutProps) {
-  const { locale } = params;
+  const resolvedParams = await params; // Ожидаем `params`, если он является Promise
+  const { locale } = resolvedParams;
 
   // Проверяем, поддерживается ли переданный locale
   if (!routing.locales.includes(locale)) {
@@ -32,7 +33,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   }
 
   // Загружаем сообщения для локализации
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>
