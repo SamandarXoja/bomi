@@ -17,6 +17,7 @@ import foto13 from "@/public/card-buildings/photo-18.jpg";
 import foto14 from "@/public/card-buildings/photo-19.jpg";
 import foto15 from "@/public/card-buildings/photo-20.jpeg";
 import foto16 from "@/public/card-buildings/project-04-1-thumbnail.jpg";
+import Footer from "@/components/footer";
 
 
 
@@ -66,7 +67,7 @@ function Project() {
                     </div>
                 ))}
             </div>
-
+            <Footer />
         </section>
     )
 }

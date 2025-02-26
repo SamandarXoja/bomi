@@ -4,6 +4,7 @@ import aboutImg from "@/public/images/comfort-10.jpg"
 import Image from 'next/image';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import logo from "@/public/images/logo-04.jpg"
+import Footer from '@/components/footer';
 
 
 const About = () => {
@@ -141,7 +142,7 @@ const About = () => {
       
 
       </section>
-
+      <Footer />
     </div>
   )
 

@@ -1,6 +1,7 @@
 
 
 
+import Footer from "@/components/footer";
 import Location from "@/components/location";
 
 export default async function Contact() {
@@ -9,7 +10,7 @@ export default async function Contact() {
       {/* <h1>CONTACT US</h1> */}
       {/* <Link href='/'>Home</Link> */}
       <Location />
-
+      <Footer />
     </div>
   );
 }
