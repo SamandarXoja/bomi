@@ -7,6 +7,7 @@ import logo from "@/public/images/logo-04.jpg"
 import Footer from '@/components/footer';
 import { ChevronUp } from 'lucide-react';
 
+import logoBm from "@/public/images/logo-engineering-2.png"
 
 const About = () => {
   return (
@@ -78,7 +79,7 @@ const About = () => {
               {/* <Image src={logo} className="w-[80px] h-[80px] mt-[10px]" width={100} height={100} alt="" /> */}
               <h3 className='text-[#fff] text-[60px] textbomi'>BOMI</h3>
               <div className='max-w-[400px]'>
-                <p className="text-white text-center text-[30px]">логотип представляющий Бренд BoMI в Узбекистане.</p>
+                <p className="text-white text-center text-[30px]">Логотип представляющий Бренд BoMI в Узбекистане.</p>
               </div>
             </div>
           </div>
@@ -87,7 +88,9 @@ const About = () => {
           <div className='flex justify-evenly mt-[200px] '>
             <div className='w-[460px] h-[700px] border border-white rounded-[30px] gap-[50px] flex flex-col items-center justify-center'>
               <div className='flex justify-center items-center flex-col'>
-                <div className='w-[100px] h-[100px] border border-white rounded-sm'></div>
+                {/* <div className='w-[100px] h-[100px] border border-white rounded-sm'>
+                </div> */}
+                  <Image className='w-[80px]' width={100} height={100} src={logoBm} priority alt='' />
                 <div className='mt-10 mb-10'>
                   <p className='text-white text-3xl'>Мы создаём красоту и уют.</p>
                   <p className='text-white text-3xl'>в каждом своём творении.</p>

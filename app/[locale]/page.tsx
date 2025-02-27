@@ -24,35 +24,29 @@ export default async function HomePage() {
   console.log(t);
 
   return (
-    <div className="relative">
-      {/* <h1>{t("title")}</h1> */}
-      {/* <Link href='/contact'>{t("contact")}</Link> */}
+    <div className="relative w-full h-screen flex justify-center items-center">
+      <Image
+        className="fixed bottom-[-7px] max-w-[600px] w-[50vw] min-w-[400px] h-auto z-10"
+        priority
+        src={banner3}
+        unoptimized
+        alt="img"
+      />
+
       <div className="absolute right-[30px] top-[30px]">
         <LocaleSwitcher />
       </div>
 
-      <div className="z-[-10] banners">
+      <div className="absolute inset-0 -z-10">
         <Image
-          className="w-[100vw] h-[100vh] object-cover"
+          className="w-full h-full object-cover"
           priority
           src={banner2}
-          objectFit="cover"
-          unoptimized
-          alt="img"
-        />
-        <Image
-          className="w-[600px] h-[90vh] min-w-[400px] min-h-[70vh] max-w-[600px] max-h-[90vh] absolute top-[56%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-          priority
-          src={banner3}
           unoptimized
           alt="img"
         />
       </div>
-
-
-
-
-
     </div>
+
   );
 }
