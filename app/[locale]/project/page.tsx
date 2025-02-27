@@ -52,8 +52,8 @@ function Project() {
         <section>
             <div className="container">
                 <div className="text-center mt-[80px] mb-[50px]">
-                    <h2 className="mb-2 project-title">PROJECT</h2>
-                    <p className="text-[#b8b8b8] text-[12px]">Everybody loves BOMI</p>
+                    <h2 className="mb-2 project-title uppercase">проекты</h2>
+                    <p className="text-[#b8b8b8] text-[18px]">Наши проекты: воплощение качества и инноваций. </p>
                 </div>
 
 

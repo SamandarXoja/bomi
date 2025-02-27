@@ -5,6 +5,7 @@ import Image from 'next/image';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import logo from "@/public/images/logo-04.jpg"
 import Footer from '@/components/footer';
+import { ChevronUp } from 'lucide-react';
 
 
 const About = () => {
@@ -22,12 +23,12 @@ const About = () => {
           <h2 className="text-[#fff] text-6xl absolute about-title top-[150px] left-[43%] z-10 uppercase">BOMI</h2>
 
           <div className="flex justify-between">
-            <div className='ml-36  h-[100vh] flex flex-col justify-center'>
-              <h3 className="about__title-sub uppercase text-[70px] text-[#c0c0c0] relative z-20 leading-[50px]">Officia </h3>
-              <p className="uppercase text-[70px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>ipsum</span> LOREM</p>
-              <div className='max-w-[500px] mt-6'>
-                <p className='text-white text-3xl'>Lorem ipsum, dolor sit amet </p>
-                <p className='text-white text-3xl'>adipisicing elit. Praesentium,</p>
+            <div className='ml-36 h-[100vh] flex flex-col justify-center'>
+              <h3 className="about__title-sub uppercase text-[60px] text-[#c0c0c0] relative z-20 ">У нас свой взгляд  </h3>
+              <p className="uppercase text-[60px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>на создание </span> будущего</p>
+              <div className='max-w-[500px] mt-8'>
+                <p className='text-white text-2xl'>Бренд BoMI – это надёжность и олицетворение качества, стиля и уверенности. Мы создаём недвижимость, которым можно доверять, объединяя инновации, традиции и внимание к деталям.  </p>
+
               </div>
             </div>
 
@@ -48,32 +49,23 @@ const About = () => {
 
 
         <div className='mx-auto container  bg-[#131313] min-h-[1700px] pt-[180px] pb-[70px]'>
-          <div className='text-center'>
+          {/* <div className='text-center'>
             <h3 className='text-[#fff] text-[60px] text-center'>Lorem, dolor.</h3>
             <p className='text-[#fff] text-[40px] text-center mb-[24px] mt-[24px]'>Lorem ipsum dolor sit amet adipisicing.</p>
             <p className='text-[#fff] text-[30px] text-center'>Lorem ipsum dolor sit amet.</p>
-          </div>
+          </div> */}
 
 
-          <div className='flex'>
-            <div>
-              <span>LOGO</span>
-              <p>Lorem, ipsum</p>
-              <p>Lorem, ipsum dolor.</p>
-            </div>
-
-
-          </div>
 
 
           <div className="flex justify-center gap-[100px] relative mr-[65px]">
             {/* Первый блок */}
             <div className="flex  flex-col items-center justify-around ">
               <Image src={logo} className="w-[80px] h-[80px]" width={100} height={100} alt="" />
-              <div className="text-center">
-                <p className="text-[#c0c0c0] text-[40px] leading-[120%]">Lorem, ipsum.</p>
-                <p className="text-[#c0c0c0] text-[40px] leading-[60%] text-center mt-2">
-                  <span className="text-white">Lorem suit, </span>ipsum.
+              <div className="text-center max-w-[400px] w-full">
+                <p className="text-[#c0c0c0] text-[30px] ">Всемирный логотип.</p>
+                <p className="text-[#c0c0c0] text-[30px]  text-center mt-2">
+                  <span className="text-white">представляющий Бренд  </span>в Южной Кореи.
                 </p>
               </div>
             </div>
@@ -85,8 +77,8 @@ const About = () => {
             <div className="flex flex-col items-center justify-around ">
               {/* <Image src={logo} className="w-[80px] h-[80px] mt-[10px]" width={100} height={100} alt="" /> */}
               <h3 className='text-[#fff] text-[60px] textbomi'>BOMI</h3>
-              <div>
-                <p className="text-white text-[40px]">Lorem, ipsum.</p>
+              <div className='max-w-[400px]'>
+                <p className="text-white text-center text-[30px]">логотип представляющий Бренд BoMI в Узбекистане.</p>
               </div>
             </div>
           </div>
@@ -97,15 +89,15 @@ const About = () => {
               <div className='flex justify-center items-center flex-col'>
                 <div className='w-[100px] h-[100px] border border-white rounded-sm'></div>
                 <div className='mt-10 mb-10'>
-                  <p className='text-white text-3xl'>Lorem, ipsum.</p>
-                  <p className='text-white text-3xl'>Lorem, ipsum.</p>
+                  <p className='text-white text-3xl'>Мы создаём красоту и уют.</p>
+                  <p className='text-white text-3xl'>в каждом своём творении.</p>
                 </div>
               </div>
 
               <div className='flex justify-center items-center flex-col mt-4'>
                 <Image className='w-[100px] h-[100px] block mb-10' src={logo} alt='' priority />
-                <p className='text-white text-3xl'>Lorem, ipsum.</p>
-                <p className='text-white text-3xl'>Lorem, ipsum dolor.</p>
+                <p className='text-white text-3xl'>Превращая недвижимость.</p>
+                <p className='text-white text-3xl text-center'>в пространство для жизни и комфорта.</p>
               </div>
 
             </div>
@@ -115,15 +107,21 @@ const About = () => {
             <div className='w-[460px] h-[700px] border border-white rounded-[30px] flex flex-col items-center justify-center gap-[120px]'>
               <div className='mt-[70px]'>
                 <h3 className='uppercase text-white text-[70px] titlees'>bomi</h3>
-                <p className='uppercase text-[#c0c0c0] text-[70px] titlees1 leading-[150%]'>bomi</p>
+                <p className="relative uppercase text-[#c0c0c0] text-[70px] titlees1 leading-[150%]">
+                  <span className="absolute left-[-2px] top-[-10px]">
+                    <ChevronUp size={40} />
+                  </span>
+                  bomi
+                </p>
               </div>
 
               <div className='flex flex-col items-center justify-center'>
-                <p className='text-white text-[30px] leading-[120%]'>Lorem, ipsum. sit</p>
-                <p className='text-white  text-[30px] leading-[105%]'>Lorem. sut</p>
-                <p className='text-white  text-[30px] leading-[120%]'>Lorem, ipsum dolor. sit amet.</p>
-
+                <p className='text-white text-[30px] leading-[120%] text-center'>Создаём пространства</p>
+                <p className='text-white  text-[30px] leading-[120%] text-center'>где природа и комфорт </p>
+                <p className='text-white  text-[30px] leading-[120%] text-center'>становятся единым целым.</p>
               </div>
+
+
 
 
             </div>
@@ -133,13 +131,13 @@ const About = () => {
 
 
           <div className=' mx-auto max-w-[1300px] h-[2px] bg-[#c0c0c0] mt-[350px]'></div>
-          <p className='text-[#ebebeb] text-center mt-9'>Lorem ipsum dolor sit amet consectetur.</p>
+          <p className='text-[#ebebeb] text-center mt-9'>О нас</p>
 
 
 
 
         </div>
-      
+
 
       </section>
       <Footer />
