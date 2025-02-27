@@ -36,7 +36,7 @@ const About = () => {
 
 
             {/* Картинка, помещаем ее в относительный контейнер */}
-            <div className=" right-0 top-0 z-0">
+            <div className="right-0 top-0 z-0">
               <Image className="w-[700px] h-[1000px] object-cover" src={aboutImg} priority alt="" />
             </div>
           </div>
@@ -47,7 +47,6 @@ const About = () => {
 
 
         </div>
-
 
         <div className='mx-auto container  bg-[#131313] min-h-[1700px] pt-[180px] pb-[70px]'>
           {/* <div className='text-center'>
@@ -90,7 +89,7 @@ const About = () => {
               <div className='flex justify-center items-center flex-col'>
                 {/* <div className='w-[100px] h-[100px] border border-white rounded-sm'>
                 </div> */}
-                  <Image className='w-[80px]' width={100} height={100} src={logoBm} priority alt='' />
+                <Image className='w-[80px]' width={100} height={100} src={logoBm} priority alt='' />
                 <div className='mt-10 mb-10'>
                   <p className='text-white text-3xl'>Мы создаём красоту и уют.</p>
                   <p className='text-white text-3xl'>в каждом своём творении.</p>
@@ -140,8 +139,6 @@ const About = () => {
 
 
         </div>
-
-
       </section>
       <Footer />
     </div>

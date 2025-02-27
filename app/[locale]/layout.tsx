@@ -6,12 +6,37 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
 const openSans = Open_Sans({
   subsets: ["latin", "cyrillic"], // Поддержка кириллицы
   variable: "--font-open-sans", // CSS переменная
   weight: ["300", "400", "600", "700"], // Доступные веса
 });
+
+
+const googleSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ProductSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ProductSans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ProductSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
+
+
 
 export const metadata: Metadata = {
   title: "bomi",
