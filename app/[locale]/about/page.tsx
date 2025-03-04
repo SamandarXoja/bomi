@@ -17,18 +17,18 @@ const About = () => {
       </div>
 
 
-      <section className="mt-[140px]">
+      <section className="mt-[150px] ml-[90px]">
         <div className="mx-auto  container bg-black  min-h-[1300px] relative">
 
           {/* Заголовок BOMI, теперь с z-индексом выше фона */}
-          <h2 className="text-[#fff] text-6xl absolute about-title top-[150px] left-[43%] z-10 uppercase">BOMI</h2>
+          <h2 className="text-[#fff] text-6xl absolute about-title top-[150px] left-[37%] z-10 uppercase">LIKE BOMI</h2>
 
           <div className="flex justify-between">
-            <div className='ml-36 h-[100vh] flex flex-col justify-center'>
-              <h3 className="about__title-sub uppercase text-[60px] text-[#c0c0c0] relative z-20 ">У нас свой взгляд  </h3>
-              <p className="uppercase text-[60px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>на создание </span> будущего</p>
+            <div className='ml-36  flex flex-col justify-center mt-[300px]'>
+              <h3 className="about__title-sub uppercase text-[60px] text-[#c0c0c0] relative z-20 font-semibold text-right max-w-[500px] w-full ">У нас свой <span className='text-white'>взгляд</span>  </h3>
+              {/* <p className="uppercase text-[60px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>на создание </span> </p> */}
               <div className='max-w-[500px] mt-8'>
-                <p className='text-white text-2xl'>Бренд BoMI – это надёжность и олицетворение качества, стиля и уверенности. Мы создаём недвижимость, которым можно доверять, объединяя инновации, традиции и внимание к деталям.  </p>
+                <p className='text-white text-2xl text-right'>Бренд BoMI – это надёжность и олицетворение качества.</p>
 
               </div>
             </div>
@@ -41,8 +41,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className='flex justify-center mt-[80px]'>
-            <Image src={logo} className='w-[80px] h-[80px]' width={100} height={100} alt="" />
+          <div className='flex justify-center mt-[80px] '>
+            <Image src={logo} className='w-[60px] h-[60px]' width={100} height={100} alt="" />
           </div>
 
 

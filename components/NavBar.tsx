@@ -94,14 +94,14 @@ export default function NavBar() {
 
           </Link>
 
-          <ul className="flex flex-col space-y-2 text-black text-[12px] font-medium trees">
+          <ul className="flex flex-col  space-y-[12px] text-black text-[12px] font-medium trees">
             {menuItems.map((item, index) => (
               <li key={index} className="navs">
                 {item.submenu ? (
                   <>
                     <button
                       onClick={() => toggleDropdown(index)}
-                      className="uppercase w-full text-left"
+                      className="uppercase w-full text-left text-[14px]"
                     >
                       {item.title}
                     </button>
