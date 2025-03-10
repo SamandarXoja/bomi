@@ -5,9 +5,12 @@ import Image from 'next/image';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import logo from "@/public/images/logo-04.jpg"
 import Footer from '@/components/footer';
-import { ChevronUp } from 'lucide-react';
 
-import logoBm from "@/public/images/logo-engineering-2.png"
+
+import logoBm from "@/public/images/logo-engineering-2.png";
+
+import logoBomi from "@/public/logos/logo.png";
+
 
 const About = () => {
   return (
@@ -27,13 +30,16 @@ const About = () => {
             <div className='ml-36  flex flex-col justify-center mt-[300px]'>
               <h3 className="about__title-sub uppercase text-[60px] text-[#c0c0c0] relative z-20 font-semibold text-right max-w-[500px] w-full ">У нас свой <span className='text-white'>взгляд</span>  </h3>
               {/* <p className="uppercase text-[60px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>на создание </span> </p> */}
-              <div className='max-w-[500px] mt-8'>
+              <div className='max-w-[500px] mt-[58px]'>
                 <p className='text-white text-2xl text-right'>Бренд BoMI – это надёжность и олицетворение качества.</p>
 
               </div>
+
+
+
             </div>
 
-
+            {/* <Image className="w-[700px] h-[1000px] object-cover" src={shadow} priority alt="" /> */}
 
             {/* Картинка, помещаем ее в относительный контейнер */}
             <div className="right-0 top-0 z-0">
@@ -61,7 +67,7 @@ const About = () => {
           <div className="flex justify-center gap-[100px] relative mr-[65px]">
             {/* Первый блок */}
             <div className="flex  flex-col items-center justify-around ">
-              <Image src={logo} className="w-[80px] h-[80px]" width={100} height={100} alt="" />
+              <Image src={logo} className="w-[80px] h-[80px] " width={100} height={100} alt="" />
               <div className="text-center max-w-[400px] w-full">
                 <p className="text-[#c0c0c0] text-[30px] ">Всемирный логотип.</p>
                 <p className="text-[#c0c0c0] text-[30px]  text-center mt-2">
@@ -75,10 +81,10 @@ const About = () => {
 
 
             <div className="flex flex-col items-center justify-around ">
-              {/* <Image src={logo} className="w-[80px] h-[80px] mt-[10px]" width={100} height={100} alt="" /> */}
-              <h3 className='text-[#fff] text-[60px] textbomi'>BOMI</h3>
+              <Image src={logoBomi} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
+              {/* <h3 className='text-[#fff] text-[60px] textbomi'>BOMI</h3> */}
               <div className='max-w-[400px]'>
-                <p className="text-white text-center text-[30px]">Логотип представляющий Бренд BoMI в Узбекистане.</p>
+                <p className="text-white text-center text-[30px]">Это высший стандарт качества.</p>
               </div>
             </div>
           </div>
@@ -108,13 +114,9 @@ const About = () => {
 
             <div className='w-[460px] h-[700px] border border-white rounded-[30px] flex flex-col items-center justify-center gap-[120px]'>
               <div className='mt-[70px]'>
-                <h3 className='uppercase text-white text-[70px] titlees'>bomi</h3>
-                <p className="relative uppercase text-[#c0c0c0] text-[70px] titlees1 leading-[150%]">
-                  <span className="absolute left-[-2px] top-[-10px]">
-                    <ChevronUp size={40} />
-                  </span>
-                  bomi
-                </p>
+                {/* <h3 className='uppercase text-white text-[70px] titlees'>bomi</h3> */}
+                <Image src={logoBomi} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
+
               </div>
 
               <div className='flex flex-col items-center justify-center'>
