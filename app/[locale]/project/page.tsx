@@ -18,7 +18,8 @@ import foto14 from "@/public/project-foto/project-07.jpg";
 import foto15 from "@/public/project-foto/project-09.jpg";
 import foto16 from "@/public/project-foto/project-05.jpg";
 import Footer from "@/components/footer";
-
+import foto17 from "@/public/project-foto/project-10.jpg";
+import foto18 from "@/public/project-foto/project-11.jpg"
 
 
 
@@ -34,8 +35,8 @@ function Project() {
         foto6,
         foto5,
         foto7,
-        foto,
-        foto9,
+        foto17,
+        foto18,
         foto10,
         foto11,
         foto12,
