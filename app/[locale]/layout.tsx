@@ -5,42 +5,25 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "./globals.css";
-import { Gothic_A1, Open_Sans } from "next/font/google";
+import { Gothic_A1, Open_Sans, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 
-// const openSans = Open_Sans({
-//   subsets: ["latin", "cyrillic"], // Поддержка кириллицы
-//   variable: "--font-open-sans", // CSS переменная
-//   weight: ["300", "400", "600", "700"], // Доступные веса
-// });
 
-
-// const googleSans = localFont({
-//   src: [
-//     {
-//       path: "../../public/fonts/ProductSans-Regular.ttf",
-//       weight: "400",
-//       style: "normal",
-//     },
-//     {
-//       path: "../../public/fonts/ProductSans-Medium.ttf",
-//       weight: "500",
-//       style: "normal",
-//     },
-//     {
-//       path: "../../public/fonts/ProductSans-Bold.ttf",
-//       weight: "700",
-//       style: "normal",
-//     },
-//   ],
-//   display: "swap",
-// });
 
 const gothicA1 = Gothic_A1({
   subsets: ["latin", "cyrillic"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-gothic-a1",
 });
+
+
+const playfair = Playfair_Display({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "700"], 
+  variable: "--font-playfair",
+});
+
+
 
 
 
@@ -65,7 +48,7 @@ export default async function RootLayout({ children, params }: { children: React
 
   return (
     <html lang={locale}>
-      <body className={`${gothicA1.className}`}>
+      <body className={`${gothicA1.className} ${playfair.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}

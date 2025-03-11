@@ -10,6 +10,17 @@ import Footer from '@/components/footer';
 import logoBm from "@/public/images/logo-engineering-2.png";
 
 import logoBomi from "@/public/logos/logo.png";
+import { Playfair_Display } from "next/font/google";
+
+import logoWihte from "@/public/logos/logo-wihte.svg"
+
+
+
+const playfair = Playfair_Display({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "700"], // Укажи нужные веса
+  variable: "--font-playfair",
+});
 
 
 const About = () => {
@@ -24,18 +35,19 @@ const About = () => {
         <div className="mx-auto  container bg-black  min-h-[1300px] relative">
 
           {/* Заголовок BOMI, теперь с z-индексом выше фона */}
-          <h2 className="text-[#fff] text-6xl absolute about-title top-[150px] left-[37%] z-10 uppercase">LIKE BOMI</h2>
+          <div className="text-[#fff] flex text-6xl absolute about-title gap-[20px] top-[150px] left-[38%] z-10 uppercase items-center">
+            <span className='leading-[120%]'>LIKE</span>
+            <Image src={logoBomi} className="w-[170px] mt-[0px]" width={100} height={100} alt="" />
+          </div>
 
           <div className="flex justify-between">
             <div className='ml-36  flex flex-col justify-center mt-[300px]'>
-              <h3 className="about__title-sub uppercase text-[60px] text-[#c0c0c0] relative z-20 font-semibold text-right max-w-[500px] w-full ">У нас свой <span className='text-white'>взгляд</span>  </h3>
+              <h3 className="about__title-sub uppercase text-[60px] text-[#c0c0c0] relative z-20 font-semibold text-right max-w-[500px] w-full">У нас свой <span className='text-white'>взгляд</span>  </h3>
               {/* <p className="uppercase text-[60px]  text-[#c0c0c0] relative z-20 "><span className='text-white about__title-sub1 uppercase'>на создание </span> </p> */}
               <div className='max-w-[500px] mt-[58px]'>
                 <p className='text-white text-2xl text-right'>Бренд BoMI – это надёжность и олицетворение качества.</p>
 
               </div>
-
-
 
             </div>
 
@@ -80,9 +92,9 @@ const About = () => {
             <div className="relative w-[1px] bg-white h-[800px] mx-10"></div>
 
 
-            <div className="flex flex-col items-center justify-around ">
-              <Image src={logoBomi} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
-              {/* <h3 className='text-[#fff] text-[60px] textbomi'>BOMI</h3> */}
+            <div className="flex flex-col items-center justify-around">
+              <Image src={logoWihte} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
+             
               <div className='max-w-[400px]'>
                 <p className="text-white text-center text-[30px]">Это высший стандарт качества.</p>
               </div>
@@ -115,7 +127,7 @@ const About = () => {
             <div className='w-[460px] h-[700px] border border-white rounded-[30px] flex flex-col items-center justify-center gap-[120px]'>
               <div className='mt-[70px]'>
                 {/* <h3 className='uppercase text-white text-[70px] titlees'>bomi</h3> */}
-                <Image src={logoBomi} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
+                <Image src={logoWihte} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
 
               </div>
 

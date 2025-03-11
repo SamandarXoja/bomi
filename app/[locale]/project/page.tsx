@@ -26,11 +26,7 @@ import foto18 from "@/public/project-foto/project-11.jpg"
 function Project() {
 
 
-    const images = [
-        foto8,
-        foto1,
-        foto,
-        foto2,
+    const images = [foto8, foto1, foto, foto2,
         foto3,
         foto6,
         foto5,
@@ -42,10 +38,9 @@ function Project() {
         foto12,
         foto13,
         foto14,
-
         foto15,
         foto16,
-    ]
+    ];
 
 
 
