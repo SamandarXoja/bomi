@@ -94,7 +94,7 @@ const About = () => {
 
             <div className="flex flex-col items-center justify-around">
               <Image src={logoWihte} className="w-[200px] mt-[10px]" width={100} height={100} alt="" />
-             
+
               <div className='max-w-[400px]'>
                 <p className="text-white text-center text-[30px]">Это высший стандарт качества.</p>
               </div>

@@ -12,7 +12,7 @@ import banner2 from "@/public/images/bg.jpg";
 
 // import imgResiton from "@/public/images/registon.jpg"
 
-
+import foto5 from "@/public/card-buildings/photo-10.jpg";
 
 import banner3 from "@/public/images/bg-new.png";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
@@ -26,9 +26,9 @@ export default async function HomePage() {
   return (
     <div className="relative w-full h-screen flex justify-center items-center">
       <Image
-        className="fixed bottom-[-7px] max-w-[600px] w-[50vw] min-w-[400px] h-auto z-10"
+        className="fixed   w-[100vw] min-w-[400px] h-screen z-10"
         priority
-        src={banner3}
+        src={foto5}
         unoptimized
         alt="img"
       />
