@@ -17,6 +17,8 @@ import foto5 from "@/public/card-buildings/photo-10.jpg";
 import banner3 from "@/public/images/bg-new.png";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 // import LocaleSwitcher from "@/components/LocaleSwitcher";
+import banner4 from "@/public/bg.png";
+
 
 
 export default async function HomePage() {
@@ -26,12 +28,19 @@ export default async function HomePage() {
   return (
     <div className="relative w-full h-screen flex justify-center items-center">
       <Image
-        className="fixed   w-[100vw] min-w-[400px] h-screen z-10"
+        className="fixed w-[100vw] min-w-[400px] h-screen z-10 object-cover"
         priority
         src={foto5}
         unoptimized
         alt="img"
       />
+      {/* <Image
+        className="fixed w-[100vw] min-w-[400px] h-screen z-10 object-cover"
+        priority
+        src={banner4}
+        unoptimized
+        alt="img"
+      /> */}
 
       <div className="absolute right-[30px] top-[30px]">
         <LocaleSwitcher />
